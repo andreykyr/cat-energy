@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page__header page-header">
       <div class="page-header__wrapper">
         <div class="page-header__logo logo">
           <div class="logo__picture">
@@ -55,22 +55,22 @@
           <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная</a>
+              <a class="main-nav__link" href="#">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Подбор программы</a>
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="page__main main">
-      <h1 class="main__heading">Подбор функционального питания для котов Cat-Energy</h1>
+      <h1 class="visually-hidden">Подбор функционального питания для котов Cat-Energy</h1>
       <section class="main__program-selection program-selection">
-        <h2 class="program-selection__heading">Форма подбора питания</h2>
+        <h2 class="visually-hidden">Форма подбора питания</h2>
         <form class="program-selection__form programs-form" method="post" action="">
             <p class="programs-form__title">
                 Подбор программы
@@ -79,8 +79,8 @@
                 Заполните анкету, и мы подберем
                 программу питания для вашего кота
             </p>
-            <fieldset class="programs-form__fieldset programs-fieldset personal-details">
-                <legend class="programs-fieldset__heading">Данные кота</legend>
+            <fieldset class="programs-form__fieldset programs-fieldset programs-fieldset--without-heading">
+                <legend class="programs-fieldset__heading visually-hidden">Данные кота</legend>
                 <label class="programs-fieldset__label" for="programs-cat-name">Имя:<sup>*</sup></label>
                 <input class="programs-fieldset__input" type="text" id="programs-cat-name" name="cat-name" placeholder="Барсик" required>
                 <label class="programs-fieldset__label" for="programs-cat-weight">Вес (кг):<sup>*</sup></label>
@@ -88,8 +88,8 @@
                 <label class="programs-fieldset__label" for="programs-cat-age">Возраст (лет):</label>
                 <input class="programs-fieldset__input" type="number" id="programs-cat-age" name="cat-age" placeholder="7" required>
             </fieldset>
-            <fieldset class="programs-form__fieldset programs-fieldset diet-program">
-                <legend class="programs-fieldset__heading">Выбор диеты</legend>
+            <fieldset class="programs-form__fieldset programs-fieldset programs-fieldset--without-heading">
+                <legend class="programs-fieldset__heading visually-hidden">Выбор диеты</legend>
                 <input class="programs-fieldset__input" type="radio" id="programs-weight-loss" name="diet-type" value="weight-loss" checked>
                 <label class="programs-fieldset__label programs-fieldset__label--radio" for="programs-weight-loss">Похудение</label>
                 <input class="programs-fieldset__input" type="radio" id="programs-weight-gain" name="diet-type" value="weight-gain">
@@ -97,18 +97,18 @@
                 <input class="programs-fieldset__input" type="radio" id="programs-need-advice" name="diet-type" value="need-advice">
                 <label class="programs-fieldset__label programs-fieldset__label--radio" for="programs-need-advice">Не знаю (Нужен ваш совет)</label>
             </fieldset>
-            <fieldset class="programs-form__fieldset programs-fieldset contacts">
+            <fieldset class="programs-form__fieldset programs-fieldset">
                 <legend class="programs-fieldset__heading">Контактные данные (владельца кота)</legend>
                 <label class="programs-fieldset__label" for="programs-owner-email">E-mail:<sup>*</sup></label>
                 <input class="programs-fieldset__input" type="email" id="programs-owner-email" name="owner-email" placeholder="kuklachev@gmail.com" required>
                 <label class="programs-fieldset__label" for="programs-owner-phone">Телефон:<sup>*</sup></label>
                 <input class="programs-fieldset__input" type="tel" id="programs-owner-phone" name="owner-phone" placeholder="8 (960) 900-60-90" required>
             </fieldset>
-            <fieldset class="programs-form__fieldset programs-fieldset comment">
+            <fieldset class="programs-form__fieldset programs-fieldset">
                 <legend class="programs-fieldset__heading">Комментарий</legend>
                 <textarea class="programs-fieldset__input programs-fieldset__input--textarea" name="about-cat">Расскажите обо всех повадках кота</textarea>
             </fieldset>
-            <fieldset class="programs-form__fieldset  programs-fieldset additional">
+            <fieldset class="programs-form__fieldset  programs-fieldset">
                 <legend class="programs-fieldset__heading">Дополнительно</legend>
                 <input class="programs-fieldset__input" type="checkbox" id="programs-add-sweetener" name="additional-product" value="sweetener" checked>
                 <label class="programs-fieldset__label programs-fieldset__label--check" for="programs-add-sweetener">Сахарозаменитель</label>
@@ -126,7 +126,7 @@
     </main>
     <footer class="page__footer footer">
       <section class="footer__address address">
-        <h2 class="address__heading">Наш адрес</h2>
+        <h2 class="address__heading visually-hidden">Наш адрес</h2>
         <div class="address__map"></div>
         <div class="address__text">
           <p class="address__title">
@@ -135,7 +135,7 @@
             дилеров!
           </p>
           <div class="address__location">
-            <p class="address__hous">
+            <p class="address__house">
             ул. Большая Конюшенная, д. 19/8
             </p>
             <p class="address__city">

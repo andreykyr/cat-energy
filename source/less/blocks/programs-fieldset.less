@@ -1,0 +1,41 @@
+.programs-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: 2px solid @green;
+
+  &--without-heading {
+    border: none;
+  }
+
+  &__heading {
+    font: 400 24px / 26px @heading;
+    .heading-color;
+  }
+
+  &__input {
+    font: 400 16px / 18px @heading;
+    .text-color;
+    .uppercase;
+
+    &::placeholder {
+      font: 400 16px / 18px @heading;
+      .text-color;
+      .uppercase;
+    }
+  }
+
+  &__label {
+    font: 400 16px / 18px @heading;
+    .text-color;
+    .uppercase;
+
+    &--radio {
+      .text-color(@dark);
+    }
+
+    &--check {
+      .heading-color;
+    }
+  }
+}

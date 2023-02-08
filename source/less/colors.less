@@ -8,6 +8,8 @@
 //TEXT
 @black: #000000;
 @dark-grey: #444444;
+@special-dark-grey: #222222;
+@dark: @special-dark-grey;
 @white: #FFFFFF;
 
 .background(@color: @grey) {
@@ -18,8 +20,9 @@
   color: @black;
 }
 
-.text-color {
-  color: @dark-grey;
+.text-color(@color: @dark-grey) {
+  @dark: @special-dark-grey;
+  color: @color;
 }
 
 .white-color {

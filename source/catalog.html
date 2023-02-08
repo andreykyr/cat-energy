@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page__header page-header">
       <div class="page-header__wrapper">
         <div class="page-header__logo logo">
           <div class="logo__picture">
@@ -55,10 +55,10 @@
           <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная</a>
+              <a class="main-nav__link" href="#">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Каталог продукции</a>
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="form.html">Подбор программы</a>
@@ -68,9 +68,9 @@
       </div>
     </header>
     <main class="page__main main main-catalog">
-      <h1 class="main-catalog__heading">Каталог продукции</h1>
+      <h1 class="main__heading  main-catalog__heading">Каталог продукции</h1>
       <section class="main-catalog__food food-catalog">
-        <h2 class="food-catalog__heading">Каталог кормов</h2>
+        <h2 class="visually-hidden">Каталог кормов</h2>
         <ul class="food-catalog__list">
             <li class="food-catalog__item food-card">
                 <h3 class="food-card__title">Cat Energy PRO 500 г</h3>
@@ -82,11 +82,11 @@
                         <th class="table-features__feature">Масса</th>
                         <td class="table-features__value">500 г</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Вкус</th>
                         <td class="table-features__value">Курица</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Цена</th>
                         <td class="table-features__value">700 Р.</td>
                     </tr>
@@ -103,11 +103,11 @@
                         <th class="table-features__feature">Масса</th>
                         <td class="table-features__value">500 г</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Вкус</th>
                         <td class="table-features__value">Курица</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Цена</th>
                         <td class="table-features__value">700 Р.</td>
                     </tr>
@@ -124,11 +124,11 @@
                         <th class="table-features__feature">Масса</th>
                         <td class="table-features__value">500 г</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Вкус</th>
                         <td class="table-features__value">Курица</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Цена</th>
                         <td class="table-features__value">700 Р.</td>
                     </tr>
@@ -145,11 +145,11 @@
                         <th class="table-features__feature">Масса</th>
                         <td class="table-features__value">500 г</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Вкус</th>
                         <td class="table-features__value">Курица</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Цена</th>
                         <td class="table-features__value">700 Р.</td>
                     </tr>
@@ -166,11 +166,11 @@
                         <th class="table-features__feature">Масса</th>
                         <td class="table-features__value">500 г</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Вкус</th>
                         <td class="table-features__value">Курица</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Цена</th>
                         <td class="table-features__value">700 Р.</td>
                     </tr>
@@ -187,11 +187,11 @@
                         <th class="table-features__feature">Масса</th>
                         <td class="table-features__value">500 г</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Вкус</th>
                         <td class="table-features__value">Курица</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Цена</th>
                         <td class="table-features__value">700 Р.</td>
                     </tr>
@@ -208,11 +208,11 @@
                         <th class="table-features__feature">Масса</th>
                         <td class="table-features__value">500 г</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Вкус</th>
                         <td class="table-features__value">Курица</td>
                     </tr>
-                    <tr>
+                    <tr class="table-features__row">
                         <th class="table-features__feature">Цена</th>
                         <td class="table-features__value">700 Р.</td>
                     </tr>
@@ -237,20 +237,13 @@
                     <p class="additional-card__quantity">1 упаковка (100 г)</p>
                     <p class="additional-card__price"> 200 Р.</p>
                 </div>
-            </li>
-            <li class="additional-products__item additional-card">
-                <h3 class="additional-card__title">Сахарозаменитель</h3>
-                <div class="additional-card__description">
-                    <p class="additional-card__quantity">1 упаковка (100 г)</p>
-                    <p class="additional-card__price"> 200 Р.</p>
-                </div>
                 <a class="additional-card__buy-btn btn" href="#" aria-label="Оформить заказ товара">Заказать</a>
             </li>
             <li class="additional-products__item additional-card">
                 <h3 class="additional-card__title">Питьевая вода</h3>
                 <div class="additional-card__description">
                     <p class="additional-card__quantity">5 литров</p>
-                    <p class="additional-card__price"> 200 Р.</p>
+                    <p class="additional-card__price"> 50 Р.</p>
                 </div>
                 <a class="additional-card__buy-btn btn" href="#" aria-label="Оформить заказ товара">Заказать</a>
             </li>
@@ -258,7 +251,7 @@
                 <h3 class="additional-card__title">Молоко</h3>
                 <div class="additional-card__description">
                     <p class="additional-card__quantity">1 литр</p>
-                    <p class="additional-card__price"> 200 Р.</p>
+                    <p class="additional-card__price"> 100 Р.</p>
                 </div>
                 <a class="additional-card__buy-btn btn" href="#" aria-label="Оформить заказ товара">Заказать</a>
             </li>
@@ -266,7 +259,7 @@
                 <h3 class="additional-card__title">Витамины</h3>
                 <div class="additional-card__description">
                     <p class="additional-card__quantity">1 упаковка (30 г)</p>
-                    <p class="additional-card__price"> 200 Р.</p>
+                    <p class="additional-card__price"> 300 Р.</p>
                 </div>
                 <a class="additional-card__buy-btn btn" href="#" aria-label="Оформить заказ товара">Заказать</a>
             </li>
@@ -283,7 +276,7 @@
     </main>
     <footer class="page__footer footer">
       <section class="footer__address address">
-        <h2 class="address__heading">Наш адрес</h2>
+        <h2 class="address__heading visually-hidden">Наш адрес</h2>
         <div class="address__map"></div>
         <div class="address__text">
           <p class="address__title">
@@ -292,7 +285,7 @@
             дилеров!
           </p>
           <div class="address__location">
-            <p class="address__hous">
+            <p class="address__house">
             ул. Большая Конюшенная, д. 19/8
             </p>
             <p class="address__city">
