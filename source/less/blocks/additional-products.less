@@ -1,6 +1,24 @@
 .additional-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   &__heading {
+    width: 100%;
     font: 400 24px / 24px @heading;
     .heading-color;
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 896px;
+  }
+
+  &__aside {
+    width: 100%;
+
+    @media (min-width: @desktop-width) {
+      width: 245px;
+    }
   }
 }

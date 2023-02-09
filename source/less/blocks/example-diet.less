@@ -1,13 +1,19 @@
 .example-diet {
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__text, &__interactive {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    &__text, &__interactive {
+      width: 40%;
+    }
+
+  }
   .background(@middle-grey);
-
-  &__title {
-    font: @regular 36px / 40px @heading;
-    .heading-color;
-  }
-
-  &__description {
-    font: @regular 14px / 18px @text;
-    .text-color;
-  }
 }

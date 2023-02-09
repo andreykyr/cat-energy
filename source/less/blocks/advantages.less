@@ -1,5 +1,17 @@
 .advantages {
 
+  &__wrapper {
+    @media (min-width: @tablet-width) {
+      width: @tablet-width;
+      margin: 0 auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: @desktop-width;
+    }
+
+  }
+
   &__title {
     font: 400 36px / 40px @heading;
     .heading-color;
@@ -7,11 +19,23 @@
 
   &__list {
     .reset-list-style;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
+    width: 100%;
     font: 400 14px / 18px @text;
     .text-color;
+
+    @media (min-width: @tablet-width) {
+      width: 324px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 245px;
+    }
+
   }
 
 }
