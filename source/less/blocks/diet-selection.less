@@ -1,20 +1,42 @@
 .diet-selection {
-  .background(@green);
-  width: 100%;
+  margin-bottom: 22px;
   .white-color;
+  //background-image:
+  //  linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 65%, @white 65%),
+  //  url(../../img/diet-selection/background-cat.jpg);
+
+  background:
+    linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 65%, @white 65%),
+    no-repeat center 0 / auto 65%
+    url(../../img/diet-selection/background-cat.jpg);
 
   &__wrapper {
     display: flex;
+    padding-top: 27px;
+    padding: 27px 20px 0;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+
   }
 
   &__title {
+    margin-bottom: 25px;
     font: 500 36px / 36px @heading;
+    //text-align: center;
   }
 
   &__subtitle {
+    margin-bottom: 29px;
     font: 400 14px / 14px @heading;
+    //text-align: center;
     text-transform: uppercase;
+  }
+
+  &__product-picture {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 3px;
   }
 
   &__btn {
@@ -23,24 +45,59 @@
   }
 
   @media (min-width: @tablet-width) {
-    .background(@white);
+    background-image: none;
     .heading-color;
 
     &__wrapper {
-      width: @tablet-width;
+      width: 708px;
+      margin: 0 auto;
+      padding: 0;
+      align-items: flex-start;
+      text-align: start;
+    }
+
+    &__title, &__subtitle, &__btn {
+      margin-left: 80px;
+    }
+
+    &__btn {
+      width: 244px;
     }
 
     &__product-picture {
+      margin-top: -60px;
+      max-width: 100%;
+      align-self: center;
       order: 2;
+      z-index: -1;
     }
   }
 
   @media (min-width: @desktop-width) {
-    &__wrapper {
-      width: @desktop-width;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 696px;
+      background:
+      linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, transparent 50%);
+      //no-repeat -100% 0 / auto 100%
+      //url(../../img/diet-selection/background-cat.jpg);
+      top: 0;
+      z-index: -2;
     }
+
+    &__wrapper {
+      width: 1220px;
+    }
+
+    &__title, &__subtitle, &__btn {
+      margin-left: 89px;
+    }
+
     &__product-picture {
-      order: initial;
+      width: 552px;
+      order: 2;
     }
   }
 }

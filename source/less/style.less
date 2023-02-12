@@ -1,5 +1,9 @@
 
 //GLOBAL
+body {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -25,9 +29,9 @@ img {
 
 //VIEWPORTS
 
-@tablet-width: 710px;
-@desktop-width: 1220px;
-@mobile-width-only: 709px;
+@tablet-width: 718px;
+@desktop-width: 1230px;
+@mobile-width-only: 717.99px;
 
 
 @import "reset-styles.less";
@@ -42,6 +46,7 @@ img {
 
 //HEADER
 @import "blocks/page-header.less";
+  @import "blocks/logo.less";
   @import "blocks/main-nav.less";
 
 //MAIN-PAGE
@@ -80,7 +85,25 @@ img {
 .page {
   height: 100%;
 }
-.page__bode {
+.page__body {
   min-height: 100%;
   min-width: 320px;
+}
+
+.decorative-bottom-line {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -80%;
+    width: 800px;
+    height: 1px;
+    .background(@grey-line);
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      display: none;
+    }
+  }
 }
