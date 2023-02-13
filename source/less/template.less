@@ -1,0 +1,54 @@
+.margin-bottom-all-devices(@mobile-margin: 20px, @tablet-margin: @mobile-margin, @desktop-margin: @tablet-margin) {
+  margin-bottom: @mobile-margin;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: @tablet-margin;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: @desktop-margin;
+  }
+}
+
+
+.wrapper-width-all-devices(@mobile-content-width, @tablet-content-width, @desktop-content-width) {
+  width: @mobile-content-width;
+
+  @media(min-width: @tablet-width) {
+    width: @tablet-content-width;
+  }
+
+  @media(min-width: @desktop-width) {
+    width: @desktop-content-width;
+  }
+}
+
+
+.font-all-devices(
+  @m-font-weight: 400,
+  @m-font-size: 14px,
+  @m-line-height: 18px,
+  @m-font-family: @Oswald,
+
+  @t-font-weight: @m-font-weight,
+  @t-font-size: @m-font-size,
+  @t-line-height: @m-line-height,
+  @t-font-family: @m-font-family,
+
+  @d-font-weight: @t-font-weight,
+  @d-font-size: @t-font-size,
+  @d-line-height: @t-line-height,
+  @d-font-family: @t-font-family
+  )
+  {
+
+  font: @m-font-weight @m-font-size / @m-line-height @m-font-family;
+
+  @media (min-width: @tablet-width) {
+    font: @t-font-weight @t-font-size / @t-line-height @t-font-family;
+  }
+
+  @media (min-width: @desktop-width) {
+    font: @d-font-weight @d-font-size / @d-line-height @d-font-family;
+  }
+}

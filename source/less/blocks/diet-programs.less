@@ -1,18 +1,19 @@
 .diet-programs {
   .reset-list-style;
   &__wrapper {
+    .wrapper-width-all-devices(@mobile-content-width,
+    @tablet-content-width, @desktop-content-width);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 
     @media (min-width: @tablet-width) {
-      width: @tablet-width;
       margin: 0 auto;
       flex-direction: row;
       justify-content: space-between;
     }
 
     @media (min-width: @desktop-width) {
-      width: @desktop-width;
     }
   }
 }
@@ -21,18 +22,24 @@
   .background(@grey);
 
   &__heading {
-    font: 400 24px / 37px @heading;
+    .font-all-devices
+      (400, 24px, 37px, @heading,
+      400, 36px, 36px, @heading);
     .uppercase;
     .heading-color;
   }
 
   &__subtitle {
-    font: 400 14px / 18px @text;
+    .font-all-devices
+      (400, 14px, 18px, @text,
+      400, 16px, 24px, @text);
     .text-color;
   }
 
   &__link {
-    font: 400 16px / 16px @heading;
+    .font-all-devices
+      (400, 16px, 16px, @text,
+      400, 20px, 30px, @text);
     .uppercase;
     .heading-color;
   }

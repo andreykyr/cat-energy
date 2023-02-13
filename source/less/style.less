@@ -33,11 +33,16 @@ img {
 @desktop-width: 1230px;
 @mobile-width-only: 717.99px;
 
+@mobile-content-width: 280px;
+@tablet-content-width: 708px;
+@desktop-content-width: 1220px;
+
 
 @import "reset-styles.less";
 @import "font.less";
 @import "colors.less";
 @import "visually-hidden.less";
+@import "template.less";
 
 
 //BLOCKS
@@ -78,8 +83,11 @@ img {
 @import "blocks/aside-gift.less";
 
 //FOOTER
-@import "blocks/address.less";
-@import "blocks/socials.less";
+@import "blocks/footer.less";
+  @import "blocks/address.less";
+
+  @import "blocks/contacts.less";
+    @import "blocks/socials.less";
 
 
 .page {

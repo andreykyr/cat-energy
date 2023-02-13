@@ -1,5 +1,11 @@
 .address {
 
+  &__text {
+    .wrapper-width-all-devices(@mobile-content-width,
+    @tablet-content-width, @desktop-content-width);
+    margin: 0 auto;
+  }
+
   &__title {
     margin: 0;
     font: @regular 16px / 18px @heading;
