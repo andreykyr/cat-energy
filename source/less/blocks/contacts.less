@@ -1,9 +1,36 @@
 .contacts {
   width: 100%;
   .background(@light-grey) ;
+
   &__wrapper {
     .wrapper-width-all-devices(@mobile-content-width,
     @tablet-content-width, @desktop-content-width);
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media(min-width: @tablet-width) {
+      flex-direction: row;
+      justify-content: space-between;
+      min-height: 150px;
+    }
   }
+
+  &__item {
+    width: 100%;
+    text-align: center;
+
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid #D9D9D9;
+
+    @media(min-width: @tablet-width) {
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+
+
 }

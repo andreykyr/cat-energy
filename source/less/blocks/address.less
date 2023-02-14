@@ -1,4 +1,5 @@
 .address {
+  position: relative;
 
   &__text {
     .wrapper-width-all-devices(@mobile-content-width,
@@ -6,23 +7,75 @@
     margin: 0 auto;
   }
 
+  &__text-wrapper {
+    width: 100%;
+    display: flex;
+    padding: 28px 0;
+    justify-content: space-between;
+    .background(@white);
+
+    @media(min-width: @tablet-width) {
+      padding: 66px 41px 51px;
+    }
+
+    @media(min-width: @desktop-width) {
+      position: absolute;
+      top: 95px;
+      box-sizing: border-box;
+      width: 570px;
+      margin: 0;
+      padding: 66px 76px 51px;
+    }
+  }
+
   &__title {
+    width: 50%;
     margin: 0;
-    font: @regular 16px / 18px @heading;
+    .font-all-devices(
+      @regular, 16px, 18px, @heading,
+      @regular, 20px, 21px, @heading
+    );
     .uppercase;
     .heading-color;
   }
 
+  &__location {
+    width: 50%;
+    .font-all-devices(
+      @regular, 14px, 20px, @text,
+      @regular, 16px, 20px, @text
+    );
+
+    @media(min-width: @tablet-width) {
+      text-align: end;
+    }
+
+    @media(min-width: @desktop-width) {
+      text-align: start;
+    }
+  }
+
   &__house {
     margin: 0;
-    font: @regular 14px / 20px @text;
+    //font: @regular 14px / 20px @text;
     .text-color;
+
+    @media(min-width: @tablet-width) {
+      margin-bottom: 20px;
+    }
   }
 
   &__city {
     margin: 0;
-    font: @regular 14px / 20px @text;
+    //font: @regular 14px / 20px @text;
     .text-color;
 
+  }
+
+  &__map {
+    width: 100%;
+    & iframe {
+      width: 100%;
+    }
   }
 }

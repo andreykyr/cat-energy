@@ -1,9 +1,39 @@
 .food-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  padding-bottom: ;
+
+  @media(min-width: @tablet-width) {
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+  }
 
   &__title {
     font: 400 16px / 20px @heading;
     .text-color(@dark);
     .uppercase;
+  }
+
+  &__picture-wrapper {
+    width: 50%;
+    min-height: 112px;
+    display: flex;
+  }
+
+  &__picture {
+    margin: auto;
+  }
+
+  &__features {
+    .margin-bottom-all-devices(13px, 33px);
+  }
+
+  &__buy-btn {
+    .margin-bottom-all-devices(25px, 40px);
   }
 
   &--open-catalog {

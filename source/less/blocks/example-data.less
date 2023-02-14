@@ -4,13 +4,37 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (min-width:@tablet-width) {
+    justify-content: flex-start;
+  }
 
   &__stats {
     display: flex;
     margin-bottom: 30px;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 42px;
+    }
+
     &--price {
+      .wrapper-width-all-devices(100%, auto, 100%);
+      flex-direction: row;
+      justify-content: center;
+
+      @media (min-width: @tablet-width) {
+        margin-right: 0;
+        margin-left: auto;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      @media (min-width: @desktop-width) {
+        margin-left: 0;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
     }
   }
 
@@ -27,13 +51,28 @@
     .lowercase;
     .text-color;
 
+    @media (min-width: @tablet-width) {
+      .background(@white);
+    }
+
+    @media (min-width: @desktop-width) {
+      .background(@middle-grey);
+    }
+
     &--price {
+      width: fit-content;
+      margin: 0;
+      padding: 0;
       .background(transparent);
       .font-all-devices
         (400, 14px, 20px, @heading,
         400, 20px, 20px, @heading);
       .uppercase;
       .heading-color;
+
+      @media(min-width: @desktop-width) {
+        margin-right: 61px;
+      }
     }
   }
 
@@ -54,6 +93,7 @@
     .heading-color;
 
     &--price {
+      margin: 0;
       .font-all-devices
         (400, 14px, 20px, @heading,
         400, 20px, 20px, @heading);

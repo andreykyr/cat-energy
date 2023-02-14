@@ -1,4 +1,5 @@
 .example-interactive {
+  margin-bottom: 25px;
 
   &__img-wrapper {
     .wrapper-width-all-devices(100%, 100%, 650px);
@@ -6,6 +7,7 @@
 
   &__img {
     max-width: none;
+    width: inherit;
     &--after {
       display: none;
     }
@@ -14,9 +16,25 @@
 
 
 .diet-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   &__parameter {
-    font: @regular 16px / 20px @heading;
+    .wrapper-width-all-devices(228px, 590px, 584px);
+    .font-all-devices(
+      @regular, 16px, 20px, @heading,
+      @regular, 20px, 30px, @heading
+    );
     .uppercase;
     .heading-color;
+
+    @media(min-width: @tablet-width) {
+      text-decoration: underline dotted;
+    }
+
+    &:last-child {
+      text-align: end;
+    }
   }
 }

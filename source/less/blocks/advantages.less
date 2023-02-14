@@ -1,11 +1,29 @@
 .advantages {
   width: 100%;
 
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid #E6E6E6;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom: none;
+  }
+
   &__wrapper {
     .wrapper-width-all-devices(@mobile-content-width,
     @tablet-content-width, @desktop-content-width);
-    margin: 0 auto;
+    margin: 0 auto 42px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 47px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 69px;
+    }
+  }
+
+
 
   &__title {
     .margin-bottom-all-devices(38px, 32px, 32px);
@@ -39,6 +57,7 @@
     }
 
       &-icon {
+        display: flex;
         width: 60px;
         height: 60px;
         margin-right: 20px;
@@ -48,6 +67,10 @@
           width: 80px;
           height: 80px;
           margin-bottom: 31px;
+        }
+
+        & svg {
+          margin: auto;
         }
       }
 
