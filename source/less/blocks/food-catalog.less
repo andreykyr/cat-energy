@@ -1,6 +1,5 @@
 .food-catalog {
 
-
   &__list {
     display: grid;
     grid-template-columns: 1fr;
@@ -16,14 +15,13 @@
     }
   }
 
-  &__item {
-    width: 280px;
-    @media (min-width: @tablet-width) {
-      width: 324px;
-    }
 
-    @media (min-width: @desktop-width) {
-      width: 245px;
+  &__item {
+    .wrapper-width-all-devices(280px, 324px, 245px);
+    .decorative-bottom-line;
+
+    &:first-child {
+      .decorative-top-line;
     }
   }
 }

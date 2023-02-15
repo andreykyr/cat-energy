@@ -101,7 +101,7 @@ img {
   min-width: 320px;
 }
 
-.decorative-bottom-line {
+.decorative-bottom-line(@color: @grey-line) {
   &::after {
     content: "";
     position: absolute;
@@ -109,11 +109,29 @@ img {
     left: -80%;
     width: 800px;
     height: 1px;
-    .background(@grey-line);
+    .background(@color);
   }
 
   @media (min-width: @tablet-width) {
     &::after {
+      display: none;
+    }
+  }
+}
+
+.decorative-top-line(@color: @grey-line) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 800px;
+    height: 1px;
+    .background(@color);
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
       display: none;
     }
   }
