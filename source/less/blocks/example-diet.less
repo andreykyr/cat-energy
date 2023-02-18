@@ -1,0 +1,44 @@
+.example-diet {
+  .background(@middle-grey);
+
+  &__wrapper {
+    .wrapper-width-all-devices(@mobile-content-width,
+    @tablet-content-width, @desktop-content-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    width: 100%;
+    .margin-bottom-all-devices(33px, 63px, 146px);
+    .font-all-devices
+      (400, 36px, 40px, @heading,
+      400, 60px, 60px, @heading);
+    .heading-color;
+  }
+
+  &__text, &__interactive {
+    width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image:
+      linear-gradient(to bottom, @white 57%, @middle-grey 57%);
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image:
+      linear-gradient(to bottom, @white 31%, @middle-grey 31%);
+
+      &__text {
+      width: 46%;
+    }
+
+    &__interactive {
+      width: 53%;
+    }
+
+  }
+}

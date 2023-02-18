@@ -18,6 +18,11 @@ ul {
   list-style: none;
 }
 
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
 h1, h2, h3, h4 {
   margin: 0;
 }
@@ -33,12 +38,15 @@ img {
 @desktop-width: 1230px;
 @mobile-width-only: 717.99px;
 
+@mobile-content-width: 280px;
+@tablet-content-width: 708px;
+@desktop-content-width: 1220px;
+
 
 @import "reset-styles.less";
 @import "font.less";
 @import "colors.less";
 @import "visually-hidden.less";
-@import "templates.less";
 
 
 //BLOCKS
@@ -64,11 +72,14 @@ img {
     @import "blocks/example-data.less";
   @import "blocks/example-interactive.less";
 
+
 //MAIN-FORM
-@import "blocks/programs-form.less";
-  @import "blocks/programs-fieldset.less";
+@import "blocks/main-form.less";
+  @import "blocks/programs-form.less";
+    @import "blocks/programs-fieldset.less";
 
 //MAIN-CATALOG
+@import "blocks/main-catalog.less";
 @import "blocks/food-catalog.less";
   @import "blocks/food-card.less";
     @import "blocks/table-features.less";
@@ -79,8 +90,12 @@ img {
 @import "blocks/aside-gift.less";
 
 //FOOTER
-@import "blocks/address.less";
-@import "blocks/socials.less";
+@import "blocks/footer.less";
+  @import "blocks/address.less";
+
+  @import "blocks/contacts.less";
+    @import "blocks/socials.less";
+    @import "blocks/developer.less";
 
 
 .page {
@@ -91,7 +106,7 @@ img {
   min-width: 320px;
 }
 
-.decorative-bottom-line {
+.decorative-bottom-line(@color: @grey-line) {
   &::after {
     content: "";
     position: absolute;
@@ -99,11 +114,29 @@ img {
     left: -80%;
     width: 800px;
     height: 1px;
-    .background(@grey-line);
+    .background(@color);
   }
 
   @media (min-width: @tablet-width) {
     &::after {
+      display: none;
+    }
+  }
+}
+
+.decorative-top-line(@color: @grey-line) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 800px;
+    height: 1px;
+    .background(@color);
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
       display: none;
     }
   }

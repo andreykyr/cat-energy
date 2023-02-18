@@ -1,0 +1,28 @@
+.socials {
+  .reset-list-style;
+  padding: 20px 0 21px;
+  overflow: hidden;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: -36px;
+
+    @media(min-width: @tablet-width) {
+      margin-right: -28px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-right: 36px;
+
+    @media(min-width: @tablet-width) {
+      margin-right: 28px;
+    }
+  }
+  &__link {
+    display: inline-block;
+  }
+}

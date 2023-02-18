@@ -1,0 +1,23 @@
+.main-catalog {
+  width: 100%;
+  overflow: hidden;
+
+  &__wrapper {
+    .wrapper-width-all-devices(@mobile-content-width,
+    @tablet-content-width, @desktop-content-width);
+    margin: 0 auto;
+  }
+
+
+  &__heading {
+    .margin-bottom-all-devices(41px, 83px, 84px);
+    .font-all-devices(
+      @regular, 36px, 36px, @heading,
+      @regular, 60px, 60px, @heading
+    );
+  }
+
+  &__food {
+    .margin-bottom-all-devices();
+  }
+}

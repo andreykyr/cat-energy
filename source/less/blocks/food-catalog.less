@@ -1,0 +1,27 @@
+.food-catalog {
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media(min-width: @tablet-width) {
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    @media(min-width: @desktop-width) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 80px;
+    }
+  }
+
+
+  &__item {
+    .wrapper-width-all-devices(280px, 324px, 245px);
+    .decorative-bottom-line;
+
+    &:first-child {
+      .decorative-top-line;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.programs-fieldset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: none;
+  border-top: 2px solid @green;
+
+  &--without-heading {
+    border: none;
+  }
+}
+
+
+.programs-fieldset__heading {
+  .font-all-devices(
+    @regular, 24px, 26px, @heading,
+    @regular, 36px, 36px, @heading);
+  .heading-color;
+}
+
+.programs-fieldset__filter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.programs-fieldset__input {
+  flex-grow: 1;
+  font: 400 16px / 18px @heading;
+  .text-color;
+  .uppercase;
+
+  &::placeholder {
+    font: 400 16px / 18px @heading;
+    .text-color;
+    .uppercase;
+  }
+}
+
+.programs-fieldset__label {
+  .font-all-devices(
+    @regular, 16px, 18px, @heading,
+    @regular, 20px, 30px, @heading);
+  .text-color;
+  .uppercase;
+
+  &--radio {
+    .text-color(@dark);
+  }
+
+  &--check {
+    .heading-color;
+  }
+}
