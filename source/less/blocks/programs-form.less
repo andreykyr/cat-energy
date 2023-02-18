@@ -1,18 +1,78 @@
 .programs-form {
+}
 
-  &__title {
-    font: 400 36px / 36px @heading;
-    .heading-color;
-  }
 
-  &__subtitle {
-    font: 400 14px / 18px @heading;
-    .uppercase;
-    .heading-color;
-  }
 
-  &__required-text {
-    font: 400 14px / 16px @text;
-    .heading-color;
+.programs-form__title {
+  .margin-bottom-all-devices(37px, 54px, 56px);
+  .font-all-devices(
+    @regular, 36px, 36px, @heading,
+    @regular, 60px, 60px, @heading);
+  .heading-color;
+}
+
+
+
+.programs-form__subtitle {
+  .margin-bottom-all-devices(39px, 66px);
+  .font-all-devices(
+    @regular, 14px, 18px, @heading,
+    @regular, 20px, 30px, @heading);
+  .uppercase;
+  .heading-color;
+}
+
+
+
+.programs-form__about-cat {
+  position: relative;
+  .margin-bottom-all-devices(22px, 72px, 69px);
+  .decorative-bottom-line;
+
+  @media(max-width: @mobile-width-only) {
+    padding-bottom: 24px;
   }
+}
+
+
+
+.programs-form__diet {
+  position: relative;
+  .margin-bottom-all-devices(26px, 75px, 69px);
+  .decorative-bottom-line;
+
+  @media(max-width: @mobile-width-only) {
+    padding-bottom: 19px;
+  }
+}
+
+
+
+.programs-form__contacts {
+  .margin-bottom-all-devices(23px, 65px, 69px);
+}
+
+
+
+.programs-form__comment {
+  .margin-bottom-all-devices(23px, 65px, 67px);
+}
+
+
+
+.programs-form__additionally {
+  .margin-bottom-all-devices(34px, 54px, 61px);
+}
+
+
+
+.programs-form__submit {
+  .margin-bottom-all-devices(21px, 0);
+}
+
+
+
+.programs-form__notice {
+  font: 400 14px / 16px @text;
+  .heading-color;
 }
