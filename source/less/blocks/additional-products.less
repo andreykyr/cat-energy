@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  .margin-bottom-all-devices(35px, 76px, 86px);
 
   &__heading {
     width: 100%;
@@ -38,16 +37,9 @@
 
   &__aside {
     width: 100%;
-    min-height: 289px;
-    .background(@green);
 
-    @media(min-width: @tablet-width) {
-      min-height: 200px;
-    }
-
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       width: 245px;
-      min-height: inherit;
     }
   }
 }
