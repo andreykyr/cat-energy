@@ -19,11 +19,13 @@
   }
 
   @media(min-width: @desktop-width) {
+    box-sizing: border-box;
     grid-template-columns: 325px 245px 80px 245px;
     padding: 15px 0 17px;
     grid-template-areas:
     "heading quantity price btn";
     align-items: center;
+    grid-template-rows: auto;
   }
 
   &__title {
@@ -58,6 +60,7 @@
 
   &__buy-btn {
     grid-area: btn;
+    .uppercase;
     //@media(min-width: @desktop-width) {
     //  width: 245px;
     //}
