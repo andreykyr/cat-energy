@@ -1,18 +1,114 @@
 .programs-form {
+  box-sizing: border-box;
+  display: flex;
+  .margin-bottom-all-devices(32px, 72px, 82px);
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  &__title {
-    font: 400 36px / 36px @heading;
-    .heading-color;
+  @media(min-width: @tablet-width) {
+    padding-right: 36px;
   }
 
-  &__subtitle {
-    font: 400 14px / 18px @heading;
-    .uppercase;
-    .heading-color;
+  @media(min-width: @desktop-width) {
+    padding-right: 0;
+  }
+}
+
+
+.programs-form__title {
+  width: 100%;
+  .margin-bottom-all-devices(37px, 54px, 56px);
+  .font-all-devices(
+    @regular, 36px, 36px, @heading,
+    @regular, 60px, 60px, @heading);
+  .heading-color;
+}
+
+
+.programs-form__subtitle {
+  width: 100%;
+  .margin-bottom-all-devices(39px, 66px);
+  .font-all-devices(
+    @regular, 14px, 18px, @heading,
+    @regular, 20px, 30px, @heading);
+  .uppercase;
+  .heading-color;
+}
+
+
+.programs-form__fieldset {
+  width: 100%;
+}
+
+.programs-form__about-cat {
+  position: relative;
+  .margin-bottom-all-devices(22px, 72px, 69px);
+  .decorative-bottom-line;
+
+  @media(min-width: @desktop-width) {
+    max-width: 570px;
+  }
+}
+
+
+.programs-form__diet {
+  position: relative;
+  .margin-bottom-all-devices(26px, 75px, 69px);
+  .decorative-bottom-line;
+
+  @media(max-width: @mobile-width-only) {
+    padding-bottom: 19px;
   }
 
-  &__required-text {
-    font: 400 14px / 16px @text;
-    .heading-color;
+  @media(min-width: @tablet-width) {
+    padding: 25px 28px;
+    border: 1px solid #E7E7E7;
+  }
+
+  @media(min-width: @desktop-width) {
+    max-width: 570px;
+  }
+}
+
+
+.programs-form__contacts {
+  .margin-bottom-all-devices(23px, 65px, 69px);
+}
+
+
+.programs-form__comment {
+  .margin-bottom-all-devices(23px, 65px, 67px);
+}
+
+
+.programs-form__additionally {
+  .margin-bottom-all-devices(34px, 54px, 61px);
+}
+
+
+.programs-form__submit {
+  .margin-bottom-all-devices(21px, 0);
+
+  @media(min-width: @tablet-width) {
+    max-width: 284px;
+  }
+
+  @media(min-width: @desktop-width) {
+    max-width: 570px;
+  }
+}
+
+
+.programs-form__notice {
+  width: 100%;
+  font: 400 14px / 16px @text;
+  .heading-color;
+
+  @media(min-width: @tablet-width) {
+    max-width: 284px;
+  }
+
+  @media(min-width: @desktop-width) {
+    max-width: 570px;
   }
 }
