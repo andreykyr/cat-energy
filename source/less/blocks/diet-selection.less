@@ -21,16 +21,21 @@
   }
 
   @media(min-width: @desktop-width) {
+    height: 470px;
     &::after {
       content: "";
       position: absolute;
-      width: 100%;
+      width: 50%;
       height: 696px;
-      background:
-      linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, transparent 50%),
-      no-repeat center 0 / auto 65%
-      url(../../img/diet-selection/index-background-desktop@1x.jpg);
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url(../../img/diet-selection/index-background-desktop@1x.jpg);
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: auto 100%;
+      background-color: #4F4F51;
       top: 0;
+      right: 0;
       z-index: -2;
     }
   }
@@ -38,6 +43,7 @@
 
 
 .diet-selection__wrapper {
+  max-height: 100%;
   display: flex;
   padding-top: 27px;
   padding: 27px 20px 0;
@@ -55,6 +61,7 @@
 
   @media(min-width: @desktop-width) {
     width: 1220px;
+    flex-wrap: wrap;
   }
 }
 
@@ -71,6 +78,7 @@
 
   @media(min-width: @desktop-width) {
     margin-left: 89px;
+    padding-top: 30px;
   }
 }
 
@@ -106,6 +114,8 @@
   }
 
   @media(min-width: @desktop-width) {
+    margin-left: -620px;
+    margin-top: 0;
     width: 552px;
     order: 2;
   }
