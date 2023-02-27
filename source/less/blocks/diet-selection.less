@@ -1,111 +1,131 @@
 .diet-selection {
   margin-bottom: 22px;
   .white-color;
-  //background-image:
-  //  linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 65%, @white 65%),
-  //  url(../../img/diet-selection/background-cat.jpg);
-
   background:
     linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 65%, @white 65%),
     no-repeat center 0 / auto 65%
-    url(../../img/diet-selection/background-cat.jpg);
+    url(../../img/diet-selection/index-background-mobile@1x.jpg),
+    linear-gradient(to right, #4E4D52 50%, #414045 50%);
 
-  &__wrapper {
-    display: flex;
-    padding-top: 27px;
-    padding: 27px 20px 0;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
+  @media(min-resolution: 2dppx) {
+    background:
+    linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 65%, @white 65%),
+    no-repeat center 0 / auto 65%
+    url(../../img/diet-selection/index-background-mobile@2x.jpg),
+    linear-gradient(to right, #4E4D52 50%, #414045 50%);
   }
 
-  &__title {
-    .margin-bottom-all-devices(25px, 40px);
-    .font-all-devices(
-      400, 36px, 40px, @heading,
-      400, 60px, 60px, @heading);
-  }
-
-  &__subtitle {
-    .margin-bottom-all-devices(29px, 49px, 52px);
-    .font-all-devices
-      (400, 14px, 14px, @heading,
-      400, 20px, 20px, @heading);
-    text-transform: uppercase;
-  }
-
-  &__product-picture {
-    width: 100%;
-    max-width: 500px;
-    margin-bottom: 3px;
-  }
-
-  &__btn {
-    .font-all-devices
-      (400, 14px, 18px, @heading,
-      400, 20px, 20px, @heading);
-    .uppercase;
-    .white-color;
-    .background(@green);
-  }
-
-  @media (min-width: @tablet-width) {
-    background-image: none;
+  @media(min-width: @tablet-width) {
+    background: none;
     .heading-color;
-
-    &__wrapper {
-      width: 708px;
-      margin: 0 auto;
-      padding: 0;
-      align-items: flex-start;
-      text-align: start;
-    }
-
-    &__title, &__subtitle, &__btn {
-      margin-left: 80px;
-    }
-
-    &__btn {
-      width: 244px;
-    }
-
-    &__product-picture {
-      margin-top: -60px;
-      max-width: 100%;
-      align-self: center;
-      order: 2;
-      z-index: -1;
-    }
   }
 
-  @media (min-width: @desktop-width) {
+  @media(min-width: @desktop-width) {
     &::after {
       content: "";
       position: absolute;
       width: 100%;
       height: 696px;
       background:
-      linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, transparent 50%);
-      //no-repeat -100% 0 / auto 100%
-      //url(../../img/diet-selection/background-cat.jpg);
+      linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, transparent 50%),
+      no-repeat center 0 / auto 65%
+      url(../../img/diet-selection/index-background-desktop@1x.jpg);
       top: 0;
       z-index: -2;
-    }
-
-    &__wrapper {
-      width: 1220px;
-    }
-
-    &__title, &__subtitle, &__btn {
-      margin-left: 89px;
-    }
-
-    &__product-picture {
-      width: 552px;
-      order: 2;
     }
   }
 }
 
 
+.diet-selection__wrapper {
+  display: flex;
+  padding-top: 27px;
+  padding: 27px 20px 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media(min-width: @tablet-width) {
+    width: 708px;
+    margin: 0 auto;
+    padding: 0;
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  @media(min-width: @desktop-width) {
+    width: 1220px;
+  }
+}
+
+
+.diet-selection__title {
+  .margin-bottom-all-devices(25px, 40px);
+  .font-all-devices(
+    400, 36px, 40px, @heading,
+    400, 60px, 60px, @heading);
+
+  @media(min-width: @tablet-width) {
+    margin-left: 80px;
+  }
+
+  @media(min-width: @desktop-width) {
+    margin-left: 89px;
+  }
+}
+
+
+.diet-selection__subtitle {
+  .margin-bottom-all-devices(29px, 49px, 52px);
+  .font-all-devices
+    (400, 14px, 14px, @heading,
+    400, 20px, 20px, @heading);
+  text-transform: uppercase;
+
+  @media(min-width: @tablet-width) {
+    margin-left: 80px;
+  }
+
+  @media(min-width: @desktop-width) {
+    margin-left: 89px;
+  }
+}
+
+
+.diet-selection__product-picture-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 3px;
+
+  @media(min-width: @tablet-width) {
+    margin-top: -60px;
+    max-width: 100%;
+    align-self: center;
+    order: 2;
+    z-index: -1;
+  }
+
+  @media(min-width: @desktop-width) {
+    width: 552px;
+    order: 2;
+  }
+}
+
+
+.diet-selection__btn {
+  .font-all-devices
+    (400, 14px, 18px, @heading,
+    400, 20px, 20px, @heading);
+  .uppercase;
+  .white-color;
+  .background(@green);
+
+  @media(min-width: @tablet-width) {
+    margin-left: 80px;
+    width: 244px;
+  }
+
+  @media(min-width: @desktop-width) {
+    margin-left: 89px;
+  }
+}

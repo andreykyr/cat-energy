@@ -127,7 +127,21 @@
             <p class="diet-selection__subtitle">
               Занялся собой? Займись котом!
             </p>
-            <img class="diet-selection__product-picture" src="img/diet-selection/product.png" width="709" height="609" alt="Упаковка в виде стаканчика. 500 грамм корма. 0% натуральный">
+            <div class="diet-selection__product-picture-wrapper">
+              <picture>
+                <source media="(min-width: 1230px)"
+                  srcset="img/diet-selection/index-can-desktop@1x.png 1x,
+                          img/diet-selection/index-can-desktop@2x.png 2x">
+                <source media="(min-width: 718px)"
+                  srcset="img/diet-selection/index-can-tablet@1x.png 1x,
+                          img/diet-selection/index-can-tablet@2x.png 2x">
+                <img class="diet-selection__product-picture"
+                  src="img/diet-selection/index-can-mobile@1x.png"
+                  srcset="img/diet-selection/index-can-mobile@1x.png 1x,
+                          img/diet-selection/index-can-mobile@2x.png 2x"
+                  alt="Упаковка в виде стаканчика. 500 грамм корма. 0% натуральный">
+              </picture>
+            </div>
             <a class="diet-selection__btn btn" href="form.html">Подобрать программу</a>
           </div>
         </div>
@@ -278,8 +292,26 @@
           </div>
           <div class="example-diet__interactive example-interactive">
             <div class="example-interactive__img-wrapper">
-              <img class="example-interactive__img example-interactive__img--before" src="img/interactive-example/before.png" width="311" height="232" alt="Толстый кот">
-              <img class="example-interactive__img example-interactive__img--after" src="img/interactive-example/after.png" width="251" height="240" alt="Худой кот">
+              <picture>
+                <source media="(min-width: 718px)"
+                  srcset="img/interactive-example/before-tablet@1x.png 1x,
+                          img/interactive-example/before-tablet@2x.png 2x">
+                <img class="example-interactive__img example-interactive__img--before"
+                  src="img/interactive-example/before-mobile@1x.png"
+                  srcset="img/interactive-example/before-mobile@1x.png 1x,
+                          img/interactive-example/before-mobile@2x.png 2x"
+                  alt="Упаковка в виде стаканчика. 500 грамм корма. 0% натуральный">
+              </picture>
+              <picture>
+                <source media="(min-width: 718px)"
+                  srcset="img/interactive-example/after-tablet@1x.png 1x,
+                          img/interactive-example/after-tablet@2x.png 2x">
+                <img class="example-interactive__img example-interactive__img--after"
+                  src="img/interactive-example/after-mobile@1x.png"
+                  srcset="img/interactive-example/after-mobile@1x.png 1x,
+                          img/interactive-example/after-mobile@2x.png 2x"
+                  alt="Упаковка в виде стаканчика. 500 грамм корма. 0% натуральный">
+              </picture>
             </div>
             <div class="example-interactive__slider diet-slider">
               <p class="diet-slider__parameter">Было</p>
