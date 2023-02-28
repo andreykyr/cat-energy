@@ -44,6 +44,7 @@
   }
 
   &__item {
+    position: relative;
     .wrapper-width-all-devices(100%, 324px, 245px);
     display: flex;
     .margin-bottom-all-devices(32px, 37px, 37px);
@@ -81,6 +82,36 @@
           400, 16px, 24px, @text);
       }
 
-  }
+    @media(min-width: @desktop-width) {
 
+      &::before {
+        position: absolute;
+        top: 32px;
+        right: 0;
+        width: 70px;
+        height: 227px;
+        font-family: @heading;
+        font-size: 100px;
+        color: @light-grey;
+
+      }
+
+      &:nth-child(1):before {
+        content: "1";
+      }
+
+      &:nth-child(2):before {
+        content: "2";
+      }
+
+      &:nth-child(3):before {
+        content: "3";
+      }
+
+      &:nth-child(4):before {
+        position: absolute;
+        content: "4";
+      }
+    }
+  }
 }

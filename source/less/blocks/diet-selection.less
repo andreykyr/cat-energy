@@ -1,5 +1,4 @@
 .diet-selection {
-  margin-bottom: 22px;
   .white-color;
   background:
     linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 65%, @white 65%),
@@ -123,6 +122,7 @@
 
 
 .diet-selection__btn {
+  width: @mobile-content-width;
   .font-all-devices
     (400, 14px, 18px, @heading,
     400, 20px, 20px, @heading);
@@ -131,8 +131,9 @@
   .background(@green);
 
   @media(min-width: @tablet-width) {
-    margin-left: 80px;
     width: 244px;
+    margin-left: 80px;
+    padding: 14px 7px;
   }
 
   @media(min-width: @desktop-width) {

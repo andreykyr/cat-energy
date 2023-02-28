@@ -1,47 +1,188 @@
 .diet-programs {
   .reset-list-style;
-  &__wrapper {
-    .wrapper-width-all-devices(@mobile-content-width,
+}
+
+
+.diet-programs__wrapper {
+  .wrapper-width-all-devices(@mobile-content-width,
     @tablet-content-width, @desktop-content-width);
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media (min-width: @tablet-width) {
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: @tablet-width) {
-      margin: 0 auto;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    @media (min-width: @desktop-width) {
-    }
+  }
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
   }
 }
 
+
+.diet-programs__card:not(:last-child) {
+  .margin-bottom-all-devices(20px, 30px, 0);
+}
+
+
 .program-card {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px 33px 18px 20px;
   .background(@grey);
 
-  &__heading {
-    .font-all-devices
-      (400, 24px, 37px, @heading,
-      400, 36px, 36px, @heading);
-    .uppercase;
-    .heading-color;
+  @media(min-width: @tablet-width) {
+    padding: 77px 279px 53px 52px;
   }
 
-  &__subtitle {
-    .font-all-devices
-      (400, 14px, 18px, @text,
-      400, 16px, 24px, @text);
-    .text-color;
+  @media(min-width: @desktop-width) {
+    width: 570px;
+    padding: 77px 51px 55px 52px;
+  }
+}
+
+
+.program-card__heading {
+  position: relative;
+  .margin-bottom-all-devices(29px, 24px, 73px);
+  padding-left: 69px;
+  .font-all-devices
+    (400, 24px, 37px, @heading,
+    400, 36px, 36px, @heading);
+  .uppercase;
+  .heading-color;
+
+  @media(min-width: @tablet-width) {
+    padding-left: 0;
   }
 
-  &__link {
-    .font-all-devices
-      (400, 16px, 16px, @text,
-      400, 20px, 30px, @text);
-    .uppercase;
-    .heading-color;
+  @media(min-width: @desktop-width) {
+    padding-left: 162px;
+  }
+}
+
+.program-card__heading::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: @green;
+  top: -6px;
+  left: 0;
+
+  @media(min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
+    top: 15px;
+    left: calc(100% + 17px);
   }
 
+  @media(min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+    top: -30px;
+    left: 0;
+  }
+
+}
+
+.program-card__heading::after {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  @media(min-width: @tablet-width) {
+    top: 15px;
+    left: 100%;
+  }
+
+  @media(min-width: @desktop-width) {
+    top: -30px;
+    left: 0;
+  }
+}
+
+
+.program-card__heading--diet::after {
+  width: 36px;
+  height: 50px;
+  top: -9px;
+  left: 7px;
+  background-image: url(../../img/diet-programs/diet-cat.svg);
+
+  @media(min-width: @tablet-width) {
+    width: 141px;
+    height: 200px;
+    top: calc(15px - 11px);
+    left: calc(100% + 17px + 30px);
+  }
+
+  @media(min-width: @desktop-width) {
+    width: 70px;
+    height: 100px;
+    top: calc(-30px - 6px);
+    left: 15px;
+  }
+
+}
+
+.program-card__heading--weight-gait::after {
+  width: 67px;
+  height: 50px;
+  top: -6px;
+  left: -9px;
+
+  background-image: url(../../img/diet-programs/weight-gain-cat.svg);
+
+  @media(min-width: @tablet-width) {
+    width: 268px;
+    height: 200px;
+    top: 15px;
+    left: calc(100% + 17px - 36px);
+  }
+
+  @media(min-width: @desktop-width) {
+    width: 134px;
+    height: 100px;
+    top: -30px;
+    left: -19px;
+  }
+
+}
+
+.program-card__subtitle {
+  .margin-bottom-all-devices(15px, 48px, 23px);
+  .font-all-devices
+  (400, 14px, 18px, @text,
+  400, 16px, 24px, @text);
+  .text-color;
+
+  @media(max-width: @mobile-width-only) {
+    padding-bottom: 23px;
+    border-bottom: 1px solid #D9D9D9;
+  }
+}
+
+
+.program-card__link {
+  .font-all-devices
+    (400, 16px, 16px, @text,
+    400, 20px, 30px, @text);
+  .uppercase;
+  .heading-color;
+}
+
+
+.program-card__icon-arrow {
+  padding-left: 17px;
+
+  @media(min-width: @tablet-width) {
+    padding-left: 25px;
+  }
+
+  @media(min-width: @desktop-width) {
+    padding-left: 28px;
+  }
 }
