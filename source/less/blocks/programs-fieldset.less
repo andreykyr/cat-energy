@@ -8,10 +8,43 @@
 
 
 .programs-fieldset__heading {
+  position: relative;
+  padding-right: 22px;
   .font-all-devices(
     @regular, 24px, 26px, @heading,
     @regular, 36px, 36px, @heading);
   .heading-color;
+  .background(@white);
+
+  @media(min-width: @tablet-width) {
+    padding-right: 42px;
+  }
+
+  @media(min-width: @desktop-width) {
+    padding-right: 40px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0.7em;
+    bottom: 0;
+    z-index: -1;
+    left: -50vw;
+    width: 151vw;
+    height: 2px;
+    .background(@green);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    .background(@white);
+    top: 0;
+    left: -40px;
+  }
 }
 
 .programs-fieldset__filter {

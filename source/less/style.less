@@ -20,6 +20,7 @@ ul {
 fieldset {
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 h1, h2, h3, h4 {
@@ -139,5 +140,11 @@ img {
     &::before {
       display: none;
     }
+  }
+}
+
+.mobile-break {
+  @media(min-width: @tablet-width) {
+    display: none;
   }
 }
