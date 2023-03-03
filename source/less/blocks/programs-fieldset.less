@@ -47,12 +47,14 @@
   }
 }
 
+
 .programs-fieldset__filter {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 
 .programs-fieldset__input {
   height: 45px;
@@ -74,12 +76,14 @@
   }
 }
 
+
 .programs-fieldset__label {
   .font-all-devices(
     @regular, 16px, 18px, @heading,
     @regular, 20px, 30px, @heading);
   .text-color;
   .uppercase;
+  cursor: pointer;
 
   &--radio {
     .text-color(@dark);
@@ -88,6 +92,57 @@
   &--check {
     .heading-color;
   }
+
+  &--radio, &--check {
+    padding-left: 45px;
+
+    @media(min-width: @tablet-width) {
+    padding-left: 60px;
+    }
+  }
+
+  &--radio {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #CDCDCD;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+    }
+
+    .programs-fieldset__input:checked + &::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      .background(@green);
+      border-radius: 50%;
+      top: 8px;
+      left: 8px;
+    }
+
+    @media(min-width: @tablet-width) {
+      &::before {
+        width: 40px;
+        height: 40px;
+        top: -5px;
+      }
+
+      .programs-fieldset__input:checked + &::after {
+        width: 18px;
+        height: 18px;
+        top: 6px;
+        left: 11px;
+      }
+    }
+  }
+
+
 }
 
 
