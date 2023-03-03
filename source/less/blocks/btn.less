@@ -11,4 +11,28 @@
 
   .background(@green);
   border: none;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  .background(@dark-green);
+}
+
+.btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+.btn--special {
+  .background(@grey);
+  .text-color;
+
+  &:hover {
+    .background(#EBEBEB);
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }

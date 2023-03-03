@@ -78,10 +78,19 @@
 
   &__value-wrapper {
     display: flex;
+    box-sizing: border-box;
     width: 124px;
-    height: 56px;
-    border: 2px solid @black;
+    min-height: 56px;
+    padding-top: 13px;
+    padding-bottom: 18px;
+    border: 1px solid #CDCDCD;
     border-radius: 5px;
+
+    @media(min-width: @tablet-width) {
+      width: 162px;
+      padding-top: 15px;
+      padding-bottom: 20px;
+    }
   }
 
   &__value {
