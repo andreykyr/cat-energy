@@ -84,67 +84,97 @@
   .text-color;
   .uppercase;
   cursor: pointer;
+}
 
-  &--radio {
-    .text-color(@dark);
+
+.programs-fieldset__label--radio {
+  padding-left: 45px;
+  .text-color(@dark);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CDCDCD;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
   }
 
-  &--check {
-    .heading-color;
+  .programs-fieldset__input:checked + &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    .background(@green);
+    border-radius: 50%;
+    top: 8px;
+    left: 8px;
   }
 
-  &--radio, &--check {
-    padding-left: 45px;
+  @media(min-width: @tablet-width) {
+  padding-left: 60px;
 
-    @media(min-width: @tablet-width) {
-    padding-left: 60px;
-    }
-  }
-
-  &--radio {
-    position: relative;
     &::before {
-      content: "";
-      position: absolute;
-      box-sizing: border-box;
-      width: 30px;
-      height: 30px;
-      border: 1px solid #CDCDCD;
-      border-radius: 50%;
-      top: 0;
-      left: 0;
+      width: 40px;
+      height: 40px;
+      top: -5px;
     }
 
     .programs-fieldset__input:checked + &::after {
-      content: "";
-      position: absolute;
-      width: 14px;
-      height: 14px;
-      .background(@green);
-      border-radius: 50%;
-      top: 8px;
-      left: 8px;
-    }
-
-    @media(min-width: @tablet-width) {
-      &::before {
-        width: 40px;
-        height: 40px;
-        top: -5px;
-      }
-
-      .programs-fieldset__input:checked + &::after {
-        width: 18px;
-        height: 18px;
-        top: 6px;
-        left: 11px;
-      }
+      width: 18px;
+      height: 18px;
+      top: 6px;
+      left: 11px;
     }
   }
-
-
 }
 
+
+.programs-fieldset__label--check {
+  position: relative;
+  padding-left: 45px;
+  .heading-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CDCDCD;
+    top: 0;
+    left: 0;
+  }
+
+  .programs-fieldset__input:checked + &::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 14px;
+    background-image: url(../../img/programs-fieldset/check.svg);
+    top: 6px;
+    left: 4px;
+  }
+
+  @media(min-width: @tablet-width) {
+  padding-left: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      top: -5px;
+    }
+
+    .programs-fieldset__input:checked + &::after {
+      top: 8px;
+      left: 11px;
+    }
+  }
+}
 
 .programs-fieldset--about-cat {
   padding-bottom: 24px;
