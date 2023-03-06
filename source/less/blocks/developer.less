@@ -1,21 +1,28 @@
 .developer {
   padding: 22px 0;
+}
 
-  &__link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.developer__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    @media (min-width: @tablet-width) {
-      justify-content: flex-end;
-    }
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
   }
+}
 
-  &__name {
-    margin-right: 22px;
+.developer__link:hover {
+  .icon-fill {
+    fill: @green;
   }
+}
 
-  &__logo {
+.developer__link:active {
+  opacity: 0.3;
+}
 
-  }
+
+.developer__name {
+  margin-right: 22px;
 }
