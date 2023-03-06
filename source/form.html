@@ -133,39 +133,39 @@
             </p>
             <fieldset class="programs-form__fieldset programs-form__about-cat programs-fieldset programs-fieldset--about-cat">
               <legend class="programs-fieldset__heading visually-hidden">Данные кота</legend>
-              <div class="programs-fieldset__filter">
-                <label class="programs-fieldset__label" for="programs-cat-name">Имя:<sup>*</sup></label>
-                <input class="programs-fieldset__input" type="text" id="programs-cat-name" name="cat-name" placeholder="Барсик" required>
+              <div class="programs-fieldset__filter programs-fieldset__filter--about-cat">
+                <label class="programs-fieldset__label programs-fieldset__label--about-cat" for="programs-cat-name">Имя:<sup>*</sup></label>
+                <input class="programs-fieldset__input programs-fieldset__input--about-cat" type="text" id="programs-cat-name" name="cat-name" placeholder="Барсик" required>
               </div>
-              <div class="programs-fieldset__filter">
+              <div class="programs-fieldset__filter programs-fieldset__filter--about-cat">
                 <label class="programs-fieldset__label" for="programs-cat-weight">Вес (кг):<sup>*</sup></label>
-                <input class="programs-fieldset__input" type="number" id="programs-cat-weight" name="cat-weight" placeholder="7" required>
+                <input class="programs-fieldset__input programs-fieldset__input--about-cat" type="number" id="programs-cat-weight" name="cat-weight" placeholder="7" required>
               </div>
-              <div class="programs-fieldset__filter">
+              <div class="programs-fieldset__filter programs-fieldset__filter--about-cat">
                 <label class="programs-fieldset__label" for="programs-cat-age">Возраст (лет):</label>
-                <input class="programs-fieldset__input" type="number" id="programs-cat-age" name="cat-age" placeholder="7" required>
+                <input class="programs-fieldset__input programs-fieldset__input--about-cat" type="number" id="programs-cat-age" name="cat-age" placeholder="7" required>
               </div>
             </fieldset>
             <fieldset class="programs-form__fieldset programs-form__diet programs-fieldset programs-fieldset--diet">
               <legend class="programs-fieldset__heading visually-hidden">Выбор диеты</legend>
               <ul class="programs-fieldset__filters-list">
-                <li class="programs-fieldset__filter">
-                  <input class="programs-fieldset__input visually-hidden" type="radio" id="programs-weight-loss" name="diet-type" value="weight-loss" checked>
+                <li class="programs-fieldset__filter programs-fieldset__filter--diet">
+                  <input class="programs-fieldset__input programs-fieldset__input--diet visually-hidden" type="radio" id="programs-weight-loss" name="diet-type" value="weight-loss" checked>
                   <label class="programs-fieldset__label programs-fieldset__label--radio" for="programs-weight-loss">Похудение</label>
                 </li>
-                <li class="programs-fieldset__filter">
-                  <input class="programs-fieldset__input visually-hidden" type="radio" id="programs-weight-gain" name="diet-type" value="weight-gain">
+                <li class="programs-fieldset__filter programs-fieldset__filter--diet">
+                  <input class="programs-fieldset__input programs-fieldset__input--diet visually-hidden" type="radio" id="programs-weight-gain" name="diet-type" value="weight-gain">
                   <label class="programs-fieldset__label programs-fieldset__label--radio" for="programs-weight-gain">Набор массы</label>
                 </li>
-                <li class="programs-fieldset__filter">
-                  <input class="programs-fieldset__input visually-hidden" type="radio" id="programs-need-advice" name="diet-type" value="need-advice">
+                <li class="programs-fieldset__filter programs-fieldset__filter--diet">
+                  <input class="programs-fieldset__input programs-fieldset__input--diet visually-hidden" type="radio" id="programs-need-advice" name="diet-type" value="need-advice">
                   <label class="programs-fieldset__label programs-fieldset__label--radio" for="programs-need-advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="programs-form__fieldset programs-form__contacts programs-fieldset programs-fieldset--contacts">
               <legend class="programs-fieldset__heading">Контактные данные <br class="mobile-break">(владельца кота)</legend>
-              <div class="programs-fieldset__filter">
+              <div class="programs-fieldset__filter programs-fieldset__filter--contacts">
                 <label class="programs-fieldset__label" for="programs-owner-email">E-mail:<sup>*</sup></label>
                 <input class="programs-fieldset__input programs-fieldset__input--contacts" type="email" id="programs-owner-email" name="owner-email" placeholder="kuklachev@gmail.com" required>
                 <div class="programs-fieldset__input-icon programs-fieldset__input-icon--mail">
@@ -180,7 +180,7 @@
                   </svg>
                 </div>
               </div>
-              <div class="programs-fieldset__filter">
+              <div class="programs-fieldset__filter programs-fieldset__filter--contacts">
                 <label class="programs-fieldset__label" for="programs-owner-phone">Телефон:<sup>*</sup></label>
                 <input class="programs-fieldset__input programs-fieldset__input--contacts" type="tel" id="programs-owner-phone" name="owner-phone" placeholder="8 (960) 900-60-90" required>
                 <div class="programs-fieldset__input-icon programs-fieldset__input-icon--phone">
@@ -200,25 +200,25 @@
             </fieldset>
             <fieldset class="programs-form__fieldset programs-form__comment programs-fieldset programs-fieldset--comment">
               <legend class="programs-fieldset__heading">Комментарий</legend>
-              <textarea class="programs-fieldset__input programs-fieldset__input--textarea" name="about-cat">Расскажите обо всех повадках кота</textarea>
+              <textarea class="programs-fieldset__input programs-fieldset__input--textarea programs-fieldset__input--comment" name="about-cat">Расскажите обо всех повадках кота</textarea>
             </fieldset>
             <fieldset class="programs-form__fieldset programs-form__additionally programs-fieldset programs-fieldset--additionally">
               <legend class="programs-fieldset__heading">Дополнительно</legend>
               <ul class="programs-fieldset__filters-list">
-                <li class="programs-fieldset__filter">
-                  <input class="programs-fieldset__input visually-hidden" type="checkbox" id="programs-add-sweetener" name="additional-product" value="sweetener" checked>
+                <li class="programs-fieldset__filter programs-fieldset__filter--additionally">
+                  <input class="programs-fieldset__input programs-fieldset__input--additionally visually-hidden" type="checkbox" id="programs-add-sweetener" name="additional-product" value="sweetener" checked>
                   <label class="programs-fieldset__label programs-fieldset__label--check" for="programs-add-sweetener">Сахарозаменитель</label>
                 </li>
-                <li class="programs-fieldset__filter">
-                  <input class="programs-fieldset__input visually-hidden" type="checkbox" id="programs-add-water" name="additional-product" value="water">
+                <li class="programs-fieldset__filter programs-fieldset__filter--additionally">
+                  <input class="programs-fieldset__input programs-fieldset__input--additionally visually-hidden" type="checkbox" id="programs-add-water" name="additional-product" value="water">
                   <label class="programs-fieldset__label programs-fieldset__label--check" for="programs-add-water">Питьевая вода</label>
                 </li>
-                <li class="programs-fieldset__filter">
-                  <input class="programs-fieldset__input visually-hidden" type="checkbox" id="programs-add-milk" name="additional-product" value="milk">
+                <li class="programs-fieldset__filter programs-fieldset__filter--additionally">
+                  <input class="programs-fieldset__input programs-fieldset__input--additionally visually-hidden" type="checkbox" id="programs-add-milk" name="additional-product" value="milk">
                   <label class="programs-fieldset__label programs-fieldset__label--check" for="programs-add-milk">Молоко</label>
                 </li>
-                <li class="programs-fieldset__filter">
-                  <input class="programs-fieldset__input visually-hidden" type="checkbox" id="programs-add-vitamins" name="additional-product" value="vitamins">
+                <li class="programs-fieldset__filter programs-fieldset__filter--additionally">
+                  <input class="programs-fieldset__input programs-fieldset__input--additionally visually-hidden" type="checkbox" id="programs-add-vitamins" name="additional-product" value="vitamins">
                   <label class="programs-fieldset__label programs-fieldset__label--check" for="programs-add-vitamins">Витамины</label>
                 </li>
               </ul>
