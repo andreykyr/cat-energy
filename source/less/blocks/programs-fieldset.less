@@ -49,6 +49,7 @@
 
 
 .programs-fieldset__filter {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -57,8 +58,9 @@
 
 
 .programs-fieldset__input {
+  box-sizing: border-box;
   height: 45px;
-  padding: 0 11px 0 15px;
+  padding: 0 45px 0 15px;
   flex-grow: 1;
   font: 400 16px / 18px @heading;
   .text-color;
@@ -66,7 +68,17 @@
   border: 1px solid #E7E7E7;
 
   @media(min-width: @tablet-width) {
-    width: 52px;
+    height: 52px;
+  }
+
+  &:hover {
+    border: 1px solid #CDCDCD;
+  }
+
+  &:focus {
+    outline: none;
+    padding: 0 45px 0 14px;
+    border: 2px solid @dark-grey;
   }
 
   &::placeholder {
@@ -77,6 +89,42 @@
 
   &--textarea {
     padding: 8px 11px 8px 15px;
+  }
+}
+
+.programs-fieldset__input:focus + .programs-fieldset__input-icon--mail {
+  .icon-lines{
+    stroke: @green;
+  }
+}
+
+.programs-fieldset__input:focus + .programs-fieldset__input-icon--phone {
+  .icon-feel{
+    fill: @green;
+  }
+}
+
+
+
+.programs-fieldset__input-icon {
+  position: absolute;
+
+  &--mail {
+    right: 17px;
+  }
+
+  &--phone {
+    right: 13px;
+  }
+
+  @media(min-width: @tablet-width) {
+    &--mail {
+      right: 20px;
+    }
+
+    &--phone {
+      right: 17px;
+    }
   }
 }
 
@@ -215,7 +263,9 @@
   }
 
   .programs-fieldset__filter {
-    max-width: 570px;
+    @media(min-width: @desktop-width) {
+      max-width: 570px;
+    }
   }
   .programs-fieldset__filter:not(:last-child) {
     .margin-bottom-all-devices(14px, 20px, 0);
