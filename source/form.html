@@ -164,9 +164,9 @@
               </ul>
             </fieldset>
             <fieldset class="programs-form__fieldset programs-form__contacts programs-fieldset programs-fieldset--contacts">
-              <legend class="programs-fieldset__heading">Контактные данные <br class="mobile-break">(владельца кота)</legend>
+              <legend class="programs-fieldset__heading programs-fieldset__heading--contacts">Контактные данные <br class="mobile-break">(владельца кота)</legend>
               <div class="programs-fieldset__filter programs-fieldset__filter--contacts">
-                <label class="programs-fieldset__label" for="programs-owner-email">E-mail:<sup>*</sup></label>
+                <label class="programs-fieldset__label programs-fieldset__label--contacts" for="programs-owner-email">E-mail:<sup>*</sup></label>
                 <input class="programs-fieldset__input programs-fieldset__input--contacts" type="email" id="programs-owner-email" name="owner-email" placeholder="kuklachev@gmail.com" required>
                 <div class="programs-fieldset__input-icon programs-fieldset__input-icon--mail">
                   <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +181,7 @@
                 </div>
               </div>
               <div class="programs-fieldset__filter programs-fieldset__filter--contacts">
-                <label class="programs-fieldset__label" for="programs-owner-phone">Телефон:<sup>*</sup></label>
+                <label class="programs-fieldset__label programs-fieldset__label--contacts" for="programs-owner-phone">Телефон:<sup>*</sup></label>
                 <input class="programs-fieldset__input programs-fieldset__input--contacts" type="tel" id="programs-owner-phone" name="owner-phone" placeholder="8 (960) 900-60-90" required>
                 <div class="programs-fieldset__input-icon programs-fieldset__input-icon--phone">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,12 +199,12 @@
               </div>
             </fieldset>
             <fieldset class="programs-form__fieldset programs-form__comment programs-fieldset programs-fieldset--comment">
-              <legend class="programs-fieldset__heading">Комментарий</legend>
+              <legend class="programs-fieldset__heading programs-fieldset__heading--comment">Комментарий</legend>
               <textarea class="programs-fieldset__input programs-fieldset__input--textarea programs-fieldset__input--comment" name="about-cat">Расскажите обо всех повадках кота</textarea>
             </fieldset>
             <fieldset class="programs-form__fieldset programs-form__additionally programs-fieldset programs-fieldset--additionally">
-              <legend class="programs-fieldset__heading">Дополнительно</legend>
-              <ul class="programs-fieldset__filters-list">
+              <legend class="programs-fieldset__heading--additionally">Дополнительно</legend>
+              <ul class="programs-fieldset__filters-list--additionally">
                 <li class="programs-fieldset__filter programs-fieldset__filter--additionally">
                   <input class="programs-fieldset__input programs-fieldset__input--additionally visually-hidden" type="checkbox" id="programs-add-sweetener" name="additional-product" value="sweetener" checked>
                   <label class="programs-fieldset__label programs-fieldset__label--check" for="programs-add-sweetener">Сахарозаменитель</label>

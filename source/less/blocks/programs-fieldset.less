@@ -91,7 +91,7 @@
 .programs-fieldset__input {
   box-sizing: border-box;
   height: 45px;
-  padding: 0 45px 0 15px;
+  padding: 0 15px 0 15px;
   flex-grow: 1;
   font: 400 16px / 18px @heading;
   .text-color;
@@ -108,7 +108,8 @@
 
   &:focus {
     outline: none;
-    padding: 0 45px 0 14px;
+    padding-left: calc(15px - 1px);
+    padding-right: calc(15px - 1px);
     border: 2px solid @dark-grey;
   }
 
@@ -118,8 +119,17 @@
     .uppercase;
   }
 
+  &--contacts {
+    padding-right: 45px;
+  }
+
   &--textarea {
+    resize: none;
     padding: 8px 11px 8px 15px;
+  }
+
+  &--textarea:focus {
+    padding: 7px 15px 7px 14px;
   }
 }
 
@@ -283,46 +293,46 @@
   }
 }
 
-  .programs-fieldset__heading--contacts {
-    .margin-bottom-all-devices(35px, 76px);
+.programs-fieldset__heading--contacts {
+  .margin-bottom-all-devices(35px, 76px);
+}
+
+.programs-fieldset__label--contacts {
+  margin-right: 12px;
+
+  @media(min-width: @tablet-width) {
+    margin-right: 15px;
   }
+}
 
-  .programs-fieldset__label--contacts {
-    margin-right: 12px;
-
-    @media(min-width: @tablet-width) {
-      margin-right: 15px;
-    }
+.programs-fieldset__input--contacts {
+  @media(min-width: @desktop-width) {
+    max-width: 486px;
   }
+}
 
-  .programs-fieldset__input--contacts {
-    @media(min-width: @desktop-width) {
-      max-width: 486px;
-    }
+
+.programs-fieldset__heading--comment {
+  .margin-bottom-all-devices(38px, 76px);
+}
+
+.programs-fieldset__input--comment {
+  height: 150px;
+
+  @media(min-width: @tablet-width) {
+    height: 174px;
   }
+}
 
 
-  .programs-fieldset__heading--comment {
-    .margin-bottom-all-devices(38px, 76px);
-  }
+.programs-fieldset__filters-list--additionally {
+  width: 100%;
+  .margin-bottom-all-devices(-25px, -42px, 0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-  .programs-fieldset__input--comment {
-    height: 150px;
-
-    @media(min-width: @tablet-width) {
-      height: 174px;
-    }
-  }
-
-
-  .programs-fieldset__filters-list--additionally {
-    width: 100%;
-    .margin-bottom-all-devices(-25px, -42px, 0);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .programs-fieldset__heading--additionally {
-    .margin-bottom-all-devices(34px, 56px);
-  }
+.programs-fieldset__heading--additionally {
+  .margin-bottom-all-devices(34px, 56px);
+}
