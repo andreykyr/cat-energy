@@ -24,5 +24,19 @@
   }
   &__link {
     display: inline-block;
+
+    &:hover {
+      .icon-lines {
+        stroke: @green;
+      }
+
+      .icon-fill {
+        fill: @green;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
