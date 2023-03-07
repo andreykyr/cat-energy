@@ -108,8 +108,8 @@
 
   &:focus {
     outline: none;
-    padding-left: calc(15px - 1px);
-    padding-right: calc(15px - 1px);
+    padding-left: 14px;
+    padding-right: 14px;
     border: 2px solid @dark-grey;
   }
 
@@ -123,10 +123,20 @@
     padding-right: 45px;
   }
 
+  &--contacts:focus {
+    padding-right: 44px;
+  }
+
   &--textarea {
     resize: none;
     padding: 8px 11px 8px 15px;
   }
+
+  &--textarea:focus {
+    padding: 7px 10px 7px 14px;
+  }
+
+}
 
 .programs-fieldset__input:focus + .programs-fieldset__input-icon--mail {
   .icon-lines{
@@ -140,6 +150,7 @@
   &--textarea:focus {
     padding: 7px 15px 7px 14px;
   }
+}
 }
 
 
