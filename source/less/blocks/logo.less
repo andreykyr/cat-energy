@@ -19,42 +19,29 @@
 
 
 .header-logo__picture {
-  @media (min-width: @tablet-width) {
-    display: none;
+  img {
+    @media(min-width: @tablet-width) {
+      width: 61px;
+      height: auto;
+    }
+
+    @media(min-width: @desktop-width) {
+      width: 71px;
+    }
   }
 }
 
 
 .header-logo__name {
-  @media (min-width: @tablet-width) {
-    display: none;
+  @media(min-width: @tablet-width) {
+    margin-left: 12px;
+  }
+
+  @media(min-width: @desktop-width) {
+    margin-left: 14px;
   }
 }
 
-
-.header-logo__tablet {
-  @media (max-width: @mobile-width-only) {
-    display: none;
-  }
-
-  svg {
-    width: 174px;
-    height: 62px;
-
-    @media (min-width: @desktop-width) {
-      width: 202px;
-      height: 60px;
-    }
-  }
-
-  &--desktop-items {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: block;
-    }
-  }
-}
 
 
 //FOOTER-LOGO
