@@ -3,6 +3,12 @@
   overflow: hidden;
   .margin-bottom-all-devices(25px, 65px, 74px);
 
+  @media (max-width: @mobile-width-only) {
+    &--without-mobile-margin {
+      margin-bottom: 0;
+    }
+  }
+
   &__wrapper {
     display: flex;
     .wrapper-width-all-devices(@mobile-content-width,
