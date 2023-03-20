@@ -3,12 +3,16 @@
 
   &__img-wrapper {
     .wrapper-width-all-devices(100%, 100%, 650px);
+
+    @media (max-width: @mobile-width-only) {
+      height: 240px;
+    }
   }
 
   &__img {
     max-width: none;
     width: inherit;
-    &--after {
+    &--inactive {
       display: none;
     }
   }
@@ -17,11 +21,16 @@
 
 .diet-slider {
   display: flex;
+  .wrapper-width-all-devices(228px, 590px, 584px);
+  box-sizing: border-box;
+  margin: 0 27px;
+  padding: 0 15px;
+  gap: 12px;
   flex-direction: row;
   justify-content: space-between;
 
   &__parameter {
-    .wrapper-width-all-devices(228px, 590px, 584px);
+    width: fit-content;
     .font-all-devices(
       @regular, 16px, 20px, @heading,
       @regular, 20px, 30px, @heading
@@ -36,5 +45,53 @@
     &:last-child {
       text-align: end;
     }
+  }
+
+  &__rail {
+    display: flex;
+    flex-grow: 1;
+    height: 14px;
+    padding: 0 5px;
+    background-color: @white;
+    border-radius: 6px;
+    border: 1px solid #CDCDCD;
+    cursor: pointer;
+  }
+}
+
+.diet-slider__btn {
+  margin: auto auto auto 0;
+  width: 50%;
+  border: none;
+  box-sizing: border-box;
+  height: 6px;
+  background-color: @green;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &--before {
+    animation-name: toggle-btn-before;
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  &--after {
+    animation-name: toggle-btn-after;
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+
+    margin: auto 0 auto auto;
+  }
+}
+
+@keyframes toggle-btn-after {
+  from {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes toggle-btn-before {
+  from {
+    transform: translateX(100%);
   }
 }

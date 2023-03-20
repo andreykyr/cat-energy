@@ -216,17 +216,18 @@
                   alt="Упаковка в виде стаканчика. 500 грамм корма. 0% натуральный">
               </picture>
               <picture>
-                <source type="image/webp"
-                srcset="img/interactive-example/after-tablet@1x.png 1x,
-                        img/interactive-example/after-tablet@2x.png 2x">
                 <source type="image/webp" media="(min-width: 718px)"
-                  srcset="img/interactive-example/after-tablet@1x.png 1x,
-                          img/interactive-example/after-tablet@2x.png 2x">
+                  srcset="img/interactive-example/after-tablet@1x.webp 1x,
+                          img/interactive-example/after-tablet@2x.webp 2x">
+                <source type="image/webp"
+                srcset="img/interactive-example/after-mobile@1x.webp 1x,
+                        img/interactive-example/after-mobile@2x.webp 2x">
+
 
                 <source media="(min-width: 718px)"
                   srcset="img/interactive-example/after-tablet@1x.png 1x,
                           img/interactive-example/after-tablet@2x.png 2x">
-                <img class="example-interactive__img example-interactive__img--after"
+                <img class="example-interactive__img example-interactive__img--after example-interactive__img--inactive"
                   src="img/interactive-example/after-mobile@1x.png"
                   srcset="img/interactive-example/after-mobile@1x.png 1x,
                           img/interactive-example/after-mobile@2x.png 2x"
@@ -235,9 +236,8 @@
             </div>
             <div class="example-interactive__slider diet-slider">
               <p class="diet-slider__parameter">Было</p>
-              <div class="example-diet__slider-wrap">
+              <div class="diet-slider__rail">
                 <button class="diet-slider__btn diet-slider__btn--before" type="button"></button>
-                <button class="diet-slider__btn diet-slider__btn--after" type="button"></button>
               </div>
               <p class="diet-slider__parameter">Стало</p>
             </div>
