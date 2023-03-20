@@ -36,6 +36,23 @@
   align-items: center;
   .decorative-bottom-line;
 
+  @media (max-width: @mobile-width-only) { //нужно для анимации открытия меню на мобильных
+    background-color: white;
+    z-index: 3;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 160vw;
+      left: -50vw;
+      height: 99%;
+      background-color: white;
+      z-index: -1;
+    }
+  }
+
+
   @media (min-width: @tablet-width) {
     padding: 0;
   }
@@ -127,6 +144,12 @@
       display: none;
     }
   }
+
+  &--open-animation {
+  animation-name: open;
+  animation-duration: 300ms;
+  animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+  }
 }
 
 
@@ -191,5 +214,15 @@
 
   @media(min-width: @desktop-width) {
     padding: 8px 0;
+  }
+}
+
+@keyframes open {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
   }
 }
