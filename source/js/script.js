@@ -23,23 +23,26 @@ const sliderBtn = sliderBlock.querySelector('.diet-slider__btn');
 const afterImg = sliderBlock.querySelector('.example-interactive__img--after');
 const beforeImg = sliderBlock.querySelector('.example-interactive__img--before');
 
-sliderRail.addEventListener('click', function() {
-  if (sliderBtn.classList.contains('diet-slider__btn--before')) {
-    sliderBtn.classList.remove('diet-slider__btn--before');
-    sliderBtn.offsetWidth = sliderBtn.offsetWidth;
-    sliderBtn.classList.add('diet-slider__btn--after');
-    afterImg.classList.remove('example-interactive__img--inactive');
-    beforeImg.classList.add('example-interactive__img--inactive');
-  } else {
-    sliderBtn.classList.remove('diet-slider__btn--after');
-    sliderBtn.offsetWidth = sliderBtn.offsetWidth;
-    sliderBtn.classList.add('diet-slider__btn--before');
-    beforeImg.classList.remove('example-interactive__img--inactive');
-    afterImg.classList.add('example-interactive__img--inactive');
-  }
-})
+console.log(window.innerWidth);
 
-buttonAfter.addEventListener('click', function() {
-  buttonBefore.classList.add('diet-slider__btn--inactive');
-  buttonAfter.classList.remove('diet-slider__btn--inactive');
-})
+sliderRail.addEventListener('click', function() {
+  if (window.innerWidth < 718) {
+    if (sliderBtn.classList.contains('diet-slider__btn--before')) {
+      sliderBtn.classList.remove('diet-slider__btn--before');
+      sliderBtn.offsetWidth = sliderBtn.offsetWidth;
+      sliderBtn.classList.add('diet-slider__btn--after');
+      afterImg.classList.remove('example-interactive__img--inactive');
+      beforeImg.classList.add('example-interactive__img--inactive');
+    } else {
+      sliderBtn.classList.remove('diet-slider__btn--after');
+      sliderBtn.offsetWidth = sliderBtn.offsetWidth;
+      sliderBtn.classList.add('diet-slider__btn--before');
+      beforeImg.classList.remove('example-interactive__img--inactive');
+      afterImg.classList.add('example-interactive__img--inactive');
+    }
+  }})
+
+//buttonAfter.addEventListener('click', function() {
+//  buttonBefore.classList.add('diet-slider__btn--inactive');
+//  buttonAfter.classList.remove('diet-slider__btn--inactive');
+//})
