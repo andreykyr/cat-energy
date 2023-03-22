@@ -25,7 +25,7 @@ const styles = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(sync.stream());
 }
 
@@ -36,7 +36,7 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("source/**/*.html")
   .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest("build"));
+  .pipe(gulp.dest("docs"));
 }
 
 exports.html = html;
@@ -47,7 +47,7 @@ const scripts = () => {
   return gulp.src("source/js/script.js")
     .pipe(terser())
     .pipe(rename("script.min.js"))
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("docs/js"))
     .pipe(sync.stream())
 }
 
@@ -62,14 +62,14 @@ const optimizeImages = () => {
     imagemin.optipng({optimizationLevel: 3}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("docs/img"))
 }
 
 exports.optimizeImages = optimizeImages;
 
 const copyImages = () => {
   return gulp.src("source/img/**/*.{png, jpg, svg}")
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.copyImages = copyImages;
@@ -77,7 +77,7 @@ exports.copyImages = copyImages;
 const createWebP = () => {
   return gulp.src("source/img/**/*.{png, jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.createWebP = createWebP;
@@ -90,7 +90,7 @@ const sprite = () => {
     inlineSvg: true
   }))
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("docs/img"))
 }
 
 exports.sprite = sprite;
@@ -107,7 +107,7 @@ const copy = (done) => {
   ], {
     base: "source"
   })
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("docs"))
   done();
 }
 
@@ -116,7 +116,7 @@ exports.copy = copy;
 //Clean
 
 const clean = () => {
-  return del("build");
+  return del("docs");
 };
 
 // Server
@@ -124,7 +124,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "build"
+      baseDir: "docs"
     },
     cors: true,
     notify: false,
