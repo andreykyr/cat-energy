@@ -26,7 +26,7 @@ const beforeImg = sliderBlock.querySelector('.example-interactive__img--before')
 console.log(window.innerWidth);
 
 sliderRail.addEventListener('click', function() {
-  if (window.innerWidth < 718) {
+  if (window.innerWidth < 768) {
     if (sliderBtn.classList.contains('diet-slider__btn--before')) {
       sliderBtn.classList.remove('diet-slider__btn--before');
       sliderBtn.offsetWidth = sliderBtn.offsetWidth;

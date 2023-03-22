@@ -3,9 +3,9 @@
 
   &__img-wrapper {
     .wrapper-width-all-devices(100%, 100%, 650px);
-
-    @media (max-width: @mobile-width-only) {
-      height: 240px;
+    height: 240px;
+    @media (min-width: @tablet-width) {
+      height: auto;
     }
   }
 
@@ -115,17 +115,5 @@
 
       margin: auto 0 auto auto;
     }
-  }
-}
-
-@keyframes toggle-btn-after {
-  from {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes toggle-btn-before {
-  from {
-    transform: translateX(100%);
   }
 }
