@@ -103,6 +103,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.svg",
+    "source/img/**/*.jpg",
     "!source/img/icons/*.svg",
   ], {
     base: "source"

@@ -7,22 +7,34 @@
   align-items: center;
   font: 400 16px / 20px @text;
   .white-color;
-  background-image: url(../../img/aside/gift-photo-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url(../../img/aside/gift-mobile@1x.jpg);
 
-  @media(min-width: @tablet-width)  {
+  @media (min-resolution: 2dppx) {
+    background-image: url(../../img/aside/gift-mobile@2x.jpg);
+  }
+
+  @media(min-width: @tablet-width) {
     padding-bottom: 0;
     padding-right: 124px;
     flex-direction: row;
-    background-image: url(../../img/aside/gift-photo-tablet.jpg);
+    background-image: url(../../img/aside/gift-tablet@1x.jpg);
+  }
+
+  @media(min-width: @tablet-width) and (min-resolution: 2dppx) {
+    background-image: url(../../img/aside/gift-tablet@2x.jpg);
   }
 
   @media(min-width: @desktop-width) {
     padding-bottom: 42px;
     padding-right: 0;
     flex-direction: column;
-    background-image: url(../../img/aside/gift-photo-desktop.jpg);
+    background-image: url(../../img/aside/gift-desktop@1x.jpg);
+  }
+
+  @media(min-width: @desktop-width) and (min-resolution: 2dppx) {
+    background-image: url(../../img/aside/gift-desktop@2x.jpg);
   }
 }
 
