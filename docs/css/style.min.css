@@ -711,35 +711,33 @@ html body .visually-hidden {
     margin-left: 89px;
   }
 }
-.diet-programs {
+.diet-programs__list {
+  width: 280px;
+  display: flex;
   margin: 0;
   padding-left: 0;
   list-style: none;
-}
-.diet-programs__wrapper {
-  width: 280px;
-  display: flex;
   margin: 0 auto;
   flex-direction: row;
   flex-wrap: wrap;
 }
 @media (min-width: 768px) {
-  .diet-programs__wrapper {
+  .diet-programs__list {
     width: 708px;
   }
 }
 @media (min-width: 1440px) {
-  .diet-programs__wrapper {
+  .diet-programs__list {
     width: 1220px;
   }
 }
 @media (min-width: 768px) {
-  .diet-programs__wrapper {
+  .diet-programs__list {
     margin: 0 auto;
   }
 }
 @media (min-width: 1440px) {
-  .diet-programs__wrapper {
+  .diet-programs__list {
     justify-content: space-between;
   }
 }

@@ -25,7 +25,7 @@
                     </picture>
                   </div>
                   <div class="header-logo__name">
-                    <svg width="101" height="18" alt="Cat Energy" class="header-logo__name-icon">
+                    <svg width="101" height="18" aria-hidden="true" focusable="false" class="header-logo__name-icon">
                       <use xlink:href="img/main-nav/logo-sprite.svg#logo-name"></use>
                     </svg>
                   </div>
@@ -89,8 +89,8 @@
             <a class="diet-selection__btn btn" href="form.html">Подобрать программу</a>
           </div>
         </div>
-        <ul class="diet-block__programs diet-programs">
-          <div class="diet-programs__wrapper">
+        <div class="diet-block__programs diet-programs">
+          <ul class="diet-programs__list">
             <li class="diet-programs__card program-card program-card--diet">
               <h3 class="program-card__heading program-card__heading--diet">Похудение</h3>
               <p class="program-card__subtitle">
@@ -99,7 +99,7 @@
               </p>
               <a class="program-card__link" href="#">
                 Каталог Slim
-              <svg class="program-card__icon-arrow" width="24" height="12" fill="black" stroke="black">
+              <svg class="program-card__icon-arrow" width="24" height="12" fill="black" stroke="black" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#icon-arrow"></use>
               </svg>
               </a>
@@ -112,13 +112,13 @@
               </p>
               <a class="program-card__link" href="#">
                 Каталог Pro
-                <svg class="program-card__icon-arrow" width="24" height="12" fill="black" stroke="black">
+                <svg class="program-card__icon-arrow" width="24" height="12" fill="black" stroke="black" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-arrow"></use>
                 </svg>
               </a>
             </li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </section>
       <section class="main__advantages advantages">
         <div class="advantages__wrapper">
@@ -127,7 +127,7 @@
           <ul class="advantages__list">
             <li class="advantages__item">
               <div class="advantages__item-icon">
-                <svg width="30" height="32" fill="white">
+                <svg width="30" height="32" fill="white" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-leaf"></use>
                 </svg>
               </div>
@@ -137,7 +137,7 @@
             </li>
             <li class="advantages__item">
               <div class="advantages__item-icon">
-                <svg width="29" height="31" fill="white">
+                <svg width="29" height="31" fill="white" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-tub"></use>
                 </svg>
               </div>
@@ -147,7 +147,7 @@
             </li>
             <li class="advantages__item">
               <div class="advantages__item-icon">
-                <svg width="25" height="30" fill="white">
+                <svg width="25" height="30" fill="white" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-eat"></use>
                 </svg>
               </div>
@@ -157,7 +157,7 @@
             </li>
             <li class="advantages__item">
               <div class="advantages__item-icon">
-                <svg width="32" height="33" fill="white">
+                <svg width="32" height="33" fill="white" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-watch"></use>
                 </svg>
               </div>
@@ -213,7 +213,7 @@
                   src="img/interactive-example/before-mobile@1x.png"
                   srcset="img/interactive-example/before-mobile@1x.png 1x,
                           img/interactive-example/before-mobile@2x.png 2x"
-                  alt="Упаковка в виде стаканчика. 500 грамм корма. 0% натуральный">
+                  alt="Состояние кота до диеты: питомец страдает от избыточного веса">
               </picture>
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
@@ -230,7 +230,7 @@
                   src="img/interactive-example/after-mobile@1x.png"
                   srcset="img/interactive-example/after-mobile@1x.png 1x,
                           img/interactive-example/after-mobile@2x.png 2x"
-                  alt="Упаковка в виде стаканчика. 500 грамм корма. 0% натуральный">
+                  alt="Состояние кота после диеты: у питомца здоровый вид и прекрасная грация">
               </picture>
             </div>
             <div class="example-interactive__slider diet-slider">
@@ -270,10 +270,11 @@
         </div>
       </section>
       <section class="footer__contacts contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
         <div class="contacts__wrapper">
           <div class="footer__logo contacts__item footer-logo">
-            <a class="footer-logo__link" href="#">
-              <svg width="128" height="24" alt="Cat Energy" class="footer-logo__link-icon" fill="black">
+            <a class="footer-logo__link" aria-label="Перейти на главную страницу" href="#">
+              <svg width="128" height="24" class="footer-logo__link-icon" fill="black" aria-hidden="true" focusable="false">
                 <use xlink:href="img/main-nav/logo-sprite.svg#logo-name"></use>
               </svg>
             </a>
@@ -282,21 +283,21 @@
             <ul class="socials__list">
               <li class="socials__item socials__vk">
                 <a class="socials__link" href="#" aria-label="Перейти в нашу группу Вконтакте">
-                  <svg width="23" height="16" fill="#666666" class="icon-fill">
+                  <svg width="23" height="16" fill="#666666" class="icon-fill" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item socials__inst">
                 <a class="socials__link" href="#" aria-label="Перейти на нашу страницу Instagram">
-                  <svg width="16" height="16" fill="#666666" class="icon-fill">
+                  <svg width="16" height="16" fill="#666666" class="icon-fill" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item socials__fb">
                 <a class="socials__link" href="#" aria-label="Перейти в нашу группу в Facebook">
-                  <svg width="22" height="22" stroke="#666666" fill="none" class="icon-lines">
+                  <svg width="22" height="22" stroke="#666666" fill="none" class="icon-lines" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-facebook"></use>
                   </svg>
                 </a>
@@ -306,12 +307,12 @@
           <div class="footer__developer contacts__item developer">
             <a class="developer__link" href="#">
               <div class="developer__name">
-                <svg width="113" height="16" fill="#444444">
+                <svg width="113" height="16" fill="#444444" aria-hidden="true" focusable="false">
                   <use xlink:href="img/developer-logo-sprite.svg#developer-name"></use>
                 </svg>
               </div>
               <div class="developer__logo">
-                <svg width="27" height="34" fill="#666666" class="icon-fill">
+                <svg width="27" height="34" fill="#666666" class="icon-fill" aria-hidden="true" focusable="false">
                   <use xlink:href="img/developer-logo-sprite.svg#developer-logo"></use>
                 </svg>
               </div>
