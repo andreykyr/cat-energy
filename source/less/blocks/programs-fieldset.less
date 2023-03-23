@@ -139,6 +139,10 @@
     border: 2px solid @dark-grey;
   }
 
+  &--error {
+    border: 1px solid red;
+  }
+
   &::placeholder {
     font: 400 16px / 18px @heading;
     .text-color;
@@ -173,11 +177,21 @@
 .programs-fieldset__input:focus + .programs-fieldset__input-icon--phone {
   .icon-fill{
     fill: @green;
-  &--textarea:focus {
-    padding: 7px 15px 7px 14px;
   }
 }
+
+.programs-fieldset__input--error + .programs-fieldset__input-icon--mail {
+  .icon-lines{
+    stroke: red;
+  }
 }
+
+.programs-fieldset__input--error + .programs-fieldset__input-icon--phone {
+  .icon-fill{
+    fill: red;
+  }
+}
+
 
 
 .programs-fieldset__input-icon {

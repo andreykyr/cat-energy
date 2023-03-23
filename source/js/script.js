@@ -42,7 +42,9 @@ sliderRail.addEventListener('click', function() {
     }
   }})
 
-//buttonAfter.addEventListener('click', function() {
-//  buttonBefore.classList.add('diet-slider__btn--inactive');
-//  buttonAfter.classList.remove('diet-slider__btn--inactive');
-//})
+
+//FORM
+
+const form = document.querySelector('.page__header');
+let inputs = form.getElementsByClassName('programs-fieldset__input');
+console.log(form);
