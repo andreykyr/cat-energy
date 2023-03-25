@@ -1525,6 +1525,23 @@ html body .visually-hidden {
   border-radius: 6px;
   cursor: pointer;
 }
+.diet-slider__btn--before {
+  -webkit-animation-name: toggle-btn-before;
+          animation-name: toggle-btn-before;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+.diet-slider__btn--after {
+  -webkit-animation-name: toggle-btn-after;
+          animation-name: toggle-btn-after;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  margin: auto 0 auto auto;
+}
 @media (min-width: 768px) {
   .diet-slider__btn {
     position: relative;
@@ -1553,25 +1570,6 @@ html body .visually-hidden {
     left: calc(50% - 0.5*8px);
     border-radius: 50%;
     background-color: #68B738;
-  }
-}
-@media (max-width: 767.9px) {
-  .diet-slider__btn--before {
-    -webkit-animation-name: toggle-btn-before;
-            animation-name: toggle-btn-before;
-    -webkit-animation-duration: 400ms;
-            animation-duration: 400ms;
-    -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-            animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .diet-slider__btn--after {
-    -webkit-animation-name: toggle-btn-after;
-            animation-name: toggle-btn-after;
-    -webkit-animation-duration: 400ms;
-            animation-duration: 400ms;
-    -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-            animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-    margin: auto 0 auto auto;
   }
 }
 .main-form {

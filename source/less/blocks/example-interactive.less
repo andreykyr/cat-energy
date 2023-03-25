@@ -91,6 +91,19 @@
   border-radius: 6px;
   cursor: pointer;
 
+  &--before {
+    animation-name: toggle-btn-before;
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  &--after {
+    animation-name: toggle-btn-after;
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    margin: auto 0 auto auto;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
     width: 34px;
@@ -120,23 +133,6 @@
       left: calc(50% - 0.5*8px);
       border-radius: 50%;
       background-color: @green;
-    }
-  }
-
-  @media (max-width: @mobile-width-only) {
-
-    &--before {
-      animation-name: toggle-btn-before;
-      animation-duration: 400ms;
-      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    &--after {
-      animation-name: toggle-btn-after;
-      animation-duration: 400ms;
-      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-
-      margin: auto 0 auto auto;
     }
   }
 }
