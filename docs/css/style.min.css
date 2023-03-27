@@ -316,6 +316,7 @@ html body .visually-hidden {
 @media (min-width: 768px) {
   .main-nav__header {
     padding: 0;
+    margin-right: 20px;
   }
 }
 .main-nav__logo {
@@ -385,6 +386,7 @@ html body .visually-hidden {
   padding-left: 0;
   list-style: none;
   display: flex;
+  max-width: 50%;
   flex-direction: column;
 }
 @media (min-width: 768px) {
@@ -739,6 +741,12 @@ html body .visually-hidden {
 @media (min-width: 1440px) {
   .diet-programs__list {
     justify-content: space-between;
+    margin-bottom: -80px;
+  }
+}
+@media (min-width: 1440px) {
+  .diet-programs__card {
+    margin-bottom: 80px;
   }
 }
 .diet-programs__card:not(:last-child) {
@@ -751,7 +759,7 @@ html body .visually-hidden {
 }
 @media (min-width: 1440px) {
   .diet-programs__card:not(:last-child) {
-    margin-bottom: 0;
+    margin-bottom: 80px;
   }
 }
 .program-card {
