@@ -2002,17 +2002,14 @@ html body .visually-hidden {
   padding-right: 14px;
   border: 2px solid #444444;
 }
-.programs-fieldset__input--error {
-  border: 1px solid red;
-}
 .programs-fieldset__input::-moz-placeholder {
   font: 400 16px / 18px "Oswald", "Arial", sans-serif;
-  color: #444444;
+  color: #888888;
   text-transform: uppercase;
 }
 .programs-fieldset__input::placeholder {
   font: 400 16px / 18px "Oswald", "Arial", sans-serif;
-  color: #444444;
+  color: #888888;
   text-transform: uppercase;
 }
 .programs-fieldset__input--contacts {
@@ -2033,12 +2030,6 @@ html body .visually-hidden {
 }
 .programs-fieldset__input:focus + .programs-fieldset__input-icon--phone .icon-fill {
   fill: #68B738;
-}
-.programs-fieldset__input--error + .programs-fieldset__input-icon--mail .icon-lines {
-  stroke: red;
-}
-.programs-fieldset__input--error + .programs-fieldset__input-icon--phone .icon-fill {
-  fill: red;
 }
 .programs-fieldset__input-icon {
   position: absolute;

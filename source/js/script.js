@@ -23,8 +23,6 @@ const sliderBtn = sliderBlock.querySelector('.diet-slider__btn');
 const afterImg = sliderBlock.querySelector('.example-interactive__img--after');
 const beforeImg = sliderBlock.querySelector('.example-interactive__img--before');
 
-console.log(window.innerWidth);
-
 sliderRail.addEventListener('click', function() {
   if (window.innerWidth < 768) {
     if (sliderBtn.classList.contains('diet-slider__btn--before')) {
@@ -42,9 +40,3 @@ sliderRail.addEventListener('click', function() {
     }
   }})
 
-
-//FORM
-
-const form = document.querySelector('.page__header');
-let inputs = form.getElementsByClassName('programs-fieldset__input');
-console.log(form);
