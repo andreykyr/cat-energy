@@ -1,20 +1,21 @@
 .example-interactive {
   margin-bottom: 25px;
+}
 
-  &__img-wrapper {
-    .wrapper-width-all-devices(100%, 100%, 650px);
-    height: 240px;
-    @media (min-width: @tablet-width) {
-      height: auto;
-    }
+.example-interactive__img-wrapper {
+  .wrapper-width-all-devices(100%, 100%, 650px);
+  height: 240px;
+  @media (min-width: @tablet-width) {
+    height: auto;
   }
+}
 
-  &__img {
-    max-width: none;
-    width: inherit;
-    &--inactive {
-      display: none;
-    }
+.example-interactive__img {
+  max-width: none;
+  width: inherit;
+
+  &--inactive {
+    display: none;
   }
 }
 
@@ -28,42 +29,55 @@
   gap: 12px;
   flex-direction: row;
   justify-content: space-between;
+}
 
-  &__parameter {
-    width: fit-content;
-    .font-all-devices(
-      @regular, 16px, 20px, @heading,
-      @regular, 20px, 30px, @heading
-    );
-    .uppercase;
-    .heading-color;
+.diet-slider__parameter {
+  width: fit-content;
+  padding: 0;
+  border: none;
+  .font-all-devices(
+    @regular, 16px, 20px, @heading,
+    @regular, 20px, 30px, @heading
+  );
+  .uppercase;
+  .heading-color;
+  background: none;
+  cursor: pointer;
 
-    @media(min-width: @tablet-width) {
-      text-decoration: underline dotted;
+  @media (min-width: @tablet-width) {
+    padding-bottom: 5px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+
+    &:hover {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     }
 
-    &:last-child {
-      text-align: end;
+    &:active {
+      border: none;
     }
   }
 
-  &__rail {
-    display: flex;
-    flex-grow: 1;
-    height: 14px;
-    padding: 0 5px;
-    background-color: @white;
-    border-radius: 6px;
-    border: 1px solid #CDCDCD;
-    cursor: pointer;
+  &:last-child {
+    text-align: end;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      height: 6px;
-      margin: auto 0;
-      background-color: #DCDCDC;
-      border: none;
-      cursor: default;
-    }
+.diet-slider__rail {
+  display: flex;
+  flex-grow: 1;
+  height: 14px;
+  padding: 0 5px;
+  background-color: @white;
+  border-radius: 6px;
+  border: 1px solid #CDCDCD;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    height: 6px;
+    margin: auto 0;
+    background-color: #DCDCDC;
+    border: none;
+    cursor: default;
   }
 }
 
@@ -77,6 +91,19 @@
   border-radius: 6px;
   cursor: pointer;
 
+  &--before {
+    animation-name: toggle-btn-before;
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  &--after {
+    animation-name: toggle-btn-after;
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    margin: auto 0 auto auto;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
     width: 34px;
@@ -88,6 +115,15 @@
     background-color: @white;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
 
+    &:hover {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.19);
+    }
+
+    &:active {
+      border-color: @green;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -97,23 +133,6 @@
       left: calc(50% - 0.5*8px);
       border-radius: 50%;
       background-color: @green;
-    }
-  }
-
-  @media (max-width: @mobile-width-only) {
-
-    &--before {
-      animation-name: toggle-btn-before;
-      animation-duration: 400ms;
-      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    &--after {
-      animation-name: toggle-btn-after;
-      animation-duration: 400ms;
-      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-
-      margin: auto 0 auto auto;
     }
   }
 }

@@ -316,6 +316,7 @@ html body .visually-hidden {
 @media (min-width: 768px) {
   .main-nav__header {
     padding: 0;
+    margin-right: 20px;
   }
 }
 .main-nav__logo {
@@ -392,6 +393,11 @@ html body .visually-hidden {
     flex-direction: row;
     flex-wrap: wrap;
     margin-right: -36px;
+  }
+}
+@media (min-width: 1440px) {
+  .main-nav__list {
+    max-width: 50%;
   }
 }
 @media (max-width: 767.9px) {
@@ -739,6 +745,12 @@ html body .visually-hidden {
 @media (min-width: 1440px) {
   .diet-programs__list {
     justify-content: space-between;
+    margin-bottom: -80px;
+  }
+}
+@media (min-width: 1440px) {
+  .diet-programs__card {
+    margin-bottom: 80px;
   }
 }
 .diet-programs__card:not(:last-child) {
@@ -751,7 +763,7 @@ html body .visually-hidden {
 }
 @media (min-width: 1440px) {
   .diet-programs__card:not(:last-child) {
-    margin-bottom: 0;
+    margin-bottom: 80px;
   }
 }
 .program-card {
@@ -1463,9 +1475,13 @@ html body .visually-hidden {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  padding: 0;
+  border: none;
   font: 400 16px / 20px "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: #000000;
+  background: none;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .diet-slider__parameter {
@@ -1479,8 +1495,14 @@ html body .visually-hidden {
 }
 @media (min-width: 768px) {
   .diet-slider__parameter {
-    -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+  }
+  .diet-slider__parameter:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+  .diet-slider__parameter:active {
+    border: none;
   }
 }
 .diet-slider__parameter:last-child {
@@ -1515,6 +1537,23 @@ html body .visually-hidden {
   border-radius: 6px;
   cursor: pointer;
 }
+.diet-slider__btn--before {
+  -webkit-animation-name: toggle-btn-before;
+          animation-name: toggle-btn-before;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+.diet-slider__btn--after {
+  -webkit-animation-name: toggle-btn-after;
+          animation-name: toggle-btn-after;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  margin: auto 0 auto auto;
+}
 @media (min-width: 768px) {
   .diet-slider__btn {
     position: relative;
@@ -1527,6 +1566,13 @@ html body .visually-hidden {
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
   }
+  .diet-slider__btn:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.19);
+  }
+  .diet-slider__btn:active {
+    border-color: #68B738;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  }
   .diet-slider__btn::after {
     content: "";
     position: absolute;
@@ -1536,25 +1582,6 @@ html body .visually-hidden {
     left: calc(50% - 0.5*8px);
     border-radius: 50%;
     background-color: #68B738;
-  }
-}
-@media (max-width: 767.9px) {
-  .diet-slider__btn--before {
-    -webkit-animation-name: toggle-btn-before;
-            animation-name: toggle-btn-before;
-    -webkit-animation-duration: 400ms;
-            animation-duration: 400ms;
-    -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-            animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .diet-slider__btn--after {
-    -webkit-animation-name: toggle-btn-after;
-            animation-name: toggle-btn-after;
-    -webkit-animation-duration: 400ms;
-            animation-duration: 400ms;
-    -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-            animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-    margin: auto 0 auto auto;
   }
 }
 .main-form {

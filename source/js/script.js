@@ -18,25 +18,59 @@ toggleBtn.addEventListener('click', function() {
 
 const sliderBlock = document.querySelector('.example-interactive');
 const sliderRail = sliderBlock.querySelector('.diet-slider__rail');
-const sliderBtn = sliderBlock.querySelector('.diet-slider__btn');
+const sliderBtnClass = 'diet-slider__btn';
+const imgClass = 'example-interactive__img';
+const sliderBtn = sliderBlock.querySelector('.' + sliderBtnClass);
+const beforeBtn = sliderBlock.querySelector('.diet-slider__before-btn');
+const afterBtn = sliderBlock.querySelector('.diet-slider__after-btn');
 
-const afterImg = sliderBlock.querySelector('.example-interactive__img--after');
-const beforeImg = sliderBlock.querySelector('.example-interactive__img--before');
+const afterImg = sliderBlock.querySelector('.' + imgClass + '--after');
+const beforeImg = sliderBlock.querySelector('.' + imgClass + '--before');
+
+console.log(window.innerWidth);
+
+const beforeSlide = function (handle, beforeImage, afterImage, handleClass, imageClass) {
+  if (handle.classList.contains(handleClass + '--before')) {
+    handle.classList.remove(handleClass + '--before');
+    handle.offsetWidth = sliderBtn.offsetWidth;
+    handle.classList.add(handleClass + '--after');
+    afterImage.classList.remove(imageClass + '--inactive');
+    beforeImage.classList.add(imageClass + '--inactive');
+  }
+}
+
+const afterSlide = function (handle, beforeImage, afterImage, handleClass, imageClass) {
+  if (handle.classList.contains(handleClass + '--after')) {
+    handle.classList.remove(handleClass + '--after');
+    handle.offsetWidth = sliderBtn.offsetWidth;
+    handle.classList.add(handleClass + '--before');
+    beforeImage.classList.remove(imageClass + '--inactive');
+    afterImage.classList.add(imageClass + '--inactive');
+  }
+}
 
 sliderRail.addEventListener('click', function() {
   if (window.innerWidth < 768) {
-    if (sliderBtn.classList.contains('diet-slider__btn--before')) {
-      sliderBtn.classList.remove('diet-slider__btn--before');
-      sliderBtn.offsetWidth = sliderBtn.offsetWidth;
-      sliderBtn.classList.add('diet-slider__btn--after');
-      afterImg.classList.remove('example-interactive__img--inactive');
-      beforeImg.classList.add('example-interactive__img--inactive');
-    } else {
-      sliderBtn.classList.remove('diet-slider__btn--after');
-      sliderBtn.offsetWidth = sliderBtn.offsetWidth;
-      sliderBtn.classList.add('diet-slider__btn--before');
-      beforeImg.classList.remove('example-interactive__img--inactive');
-      afterImg.classList.add('example-interactive__img--inactive');
+    if (sliderBtn.classList.contains(sliderBtnClass + '--before')) {
+      beforeSlide(sliderBtn, beforeImg, afterImg, sliderBtnClass, 'example-interactive__img');
+    } else if (sliderBtn.classList.contains(sliderBtnClass + '--after')) {
+      afterSlide(sliderBtn, beforeImg, afterImg, sliderBtnClass, 'example-interactive__img');
     }
-  }})
+  }
+})
+
+afterBtn.addEventListener('click', function() {
+  if (sliderBtn.classList.contains(sliderBtnClass + '--before')) {
+    beforeSlide(sliderBtn, beforeImg, afterImg, sliderBtnClass, 'example-interactive__img');
+  }
+})
+
+beforeBtn.addEventListener('click', function() {
+  if (sliderBtn.classList.contains(sliderBtnClass + '--after')) {
+    afterSlide(sliderBtn, beforeImg, afterImg, sliderBtnClass, 'example-interactive__img');
+  }
+})
+
+
+
 
