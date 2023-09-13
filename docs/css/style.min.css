@@ -894,7 +894,7 @@ html body .visually-hidden {
   height: 50px;
   top: -6px;
   left: -9px;
-  background-image: url(../../img/diet-programs/weight-gain-cat.svg);
+  background-image: url(../img/diet-programs/weight-gain-cat.svg);
 }
 @media (min-width: 768px) {
   .program-card__heading--weight-gait::after {
